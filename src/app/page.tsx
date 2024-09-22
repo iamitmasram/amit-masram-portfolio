@@ -21,44 +21,35 @@ interface WritingItem {
   link: string;
 }
 
-const workItems: WorkItem[] = [
-  {
-    company: "Self-taught Learning & Building",
-    role: "Independent Developer & Learner",
-    details: "Dedicated to mastering software development through hands-on projects and continuous learning. Built several full-stack applications and explored various tech stacks, including Flutter, Node.js, AI integration, and backend technologies."
-  }
-];
+const workItems: WorkItem[] = [{ company: "Tourease", role: "Solo Developer", details: "Turning concepts into reality while continuously learning and refining my skills." }];
+
 
 const projectItems: ProjectItem[] = [
   {
     name: "Tourease",
-    description: "An AI-powered application designed to serve as a personalized tour guide, providing customized itineraries, local insights, and real-time travel recommendations.",
+    description: "An AI app providing personalized itineraries and real-time travel recommendations.",
     link: "#"
   },
   {
     name: "AI Chatbot",
-    description: "A conversational AI chatbot leveraging natural language processing to engage in human-like interactions, enhancing customer support and user experience.",
+    description: "A conversational AI that enhances customer support through human-like interactions.",
     link: "#"
   },
   {
-    name: "AI Image-Generator",
-    description: "A generative AI tool that transforms textual inputs into visually compelling images, using state-of-the-art machine learning techniques.",
+    name: "AI Image Generator",
+    description: "A tool that creates images from text using advanced machine learning techniques.",
     link: "#"
   }
 ];
 
+
 const writingItems: WritingItem[] = [
-  {
-    title: "My Journey to SF (In Progress)",
-    description: "A personal account documenting my experiences and challenges in building a startup, including insights on tech entrepreneurship and innovation.",
-    link: "#"
-  },
-  {
-    title: "-1 to 0 (In Progress)",
-    description: "A detailed narrative of how I transitioned into the AI field, starting from zero coding experience and building proficiency in artificial intelligence.",
-    link: "#"
-  }
-];
+  { title: "Turning to Reality (In Progress)", 
+  description: "Exploring my plans and aspirations.",
+   link: "#" }, 
+  { title: "-1 to 0 (In Progress)",
+     description: "In this journey, I’m validating various ideas and seeing how many will succeed.", link: "#" }];
+
 
 export default function PortfolioLanding() {
   const [isDarkMode, setIsDarkMode] = useState(false)
