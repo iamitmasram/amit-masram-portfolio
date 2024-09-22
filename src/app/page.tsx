@@ -88,7 +88,7 @@ export default function PortfolioLanding() {
         <main className="max-w-2xl w-full p-6">
           <h1 className={`text-4xl md:text-6xl font-bold mb-6 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Amit Masram</h1>
           <p className="text-sm mb-8 text-center">
-            <a href="mailto:amitmasram831@gmail.com" className="hover:underline">Email</a> |
+            {/* <a href="mailto:amitmasram831@gmail.com" className="hover:underline">Email</a> | */}
             <a href="https://x.com/AmitMasram10" target="_blank" rel="noopener noreferrer" className="hover:underline"> Twitter</a> |
             <a href="https://www.linkedin.com/in/amit-masram/" target="_blank" rel="noopener noreferrer" className="hover:underline"> LinkedIn</a> |
             <a href="https://github.com/Amitmasram" target="_blank" rel="noopener noreferrer" className="hover:underline"> GitHub</a>
@@ -118,6 +118,7 @@ export default function PortfolioLanding() {
               View Projects
             </Button>
             <Button
+             onClick={() => window.location.href = 'mailto:amitmasram831@gmail.com'}
               className={`${isDarkMode ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-900 text-white hover:bg-gray-700'}`}
             >
               Contact Me
