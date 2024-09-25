@@ -31,9 +31,9 @@ const workItems: WorkItem[] = [{ company: "Tourease", role: "Solo Developer", de
 
 // Sample thought items
 const thoughtItems: ThoughtItem[] = [
-  { content: "Embracing challenges as opportunities for growth.", date: "September 2024" },
+  { content: "Create, iterate, and evolve.", date: "September 2024" },
+  { content: "Vision is nothing without execution.", date: "September 2024" },
   { content: "In the end, only one will stand.", date: "August 2024" },
-  { content: "At the end there will be only one.", date: "September 2024" },
 ];
 
 const projectItems: ProjectItem[] = [
@@ -58,9 +58,6 @@ const writingItems: WritingItem[] = [
   { title: "Turning to Reality (In Progress)",
     description: "Exploring my plans and aspirations.",
     link: "#" },
-  { title: "Turning to Reality (In Progress)", 
-  description: "Exploring my plans and aspirations.",
-   link: "#" }, 
 
   { title: "-1 to 0 (In Progress)",
      description: "In this journey, I’m validating various ideas and seeing how many will succeed.", link: "#" }];
@@ -162,7 +159,7 @@ export default function PortfolioLanding() {
             {projectItems.map((item, index) => (
               <div key={index} className="mb-4">
                 <a href={item.link} className="block hover:underline">
-                  <h3 className="text-base font-semibold">{item.name}</h3>
+                  <h3 className="text-base/relaxed font-semibold">{item.name}</h3>
                   <p className="text-sm text-gray-500">{item.description}</p>
                 </a>
               </div>
