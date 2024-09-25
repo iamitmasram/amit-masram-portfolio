@@ -28,16 +28,14 @@ interface ThoughtItem {
 
 const workItems: WorkItem[] = [{ company: "Tourease", role: "Solo Developer", details: "Turning concepts into reality while continuously learning and refining my skills." }];
 
-<<<<<<< HEAD
+
 // Sample thought items
 const thoughtItems: ThoughtItem[] = [
   { content: "Embracing challenges as opportunities for growth.", date: "September 2024" },
   { content: "In the end, only one will stand.", date: "August 2024" },
-  { content: "At the end there will be a only one.", date: "September 2024" },
+  { content: "At the end there will be only one.", date: "September 2024" },
 ];
-=======
 
->>>>>>> bc399779678437156a63e32e87ebe2851e98cb24
 const projectItems: ProjectItem[] = [
   {
     name: "Tourease",
@@ -56,17 +54,14 @@ const projectItems: ProjectItem[] = [
   }
 ];
 
-
 const writingItems: WritingItem[] = [
-<<<<<<< HEAD
   { title: "Turning to Reality (In Progress)",
-  description: "Exploring my plans and aspirations.",
-   link: "#" },
-=======
+    description: "Exploring my plans and aspirations.",
+    link: "#" },
   { title: "Turning to Reality (In Progress)", 
   description: "Exploring my plans and aspirations.",
    link: "#" }, 
->>>>>>> bc399779678437156a63e32e87ebe2851e98cb24
+
   { title: "-1 to 0 (In Progress)",
      description: "In this journey, I’m validating various ideas and seeing how many will succeed.", link: "#" }];
 
