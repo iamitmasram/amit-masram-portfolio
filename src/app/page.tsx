@@ -20,45 +20,46 @@ interface WritingItem {
   description: string;
   link: string;
 }
+// Define the Thoughts interface
+interface ThoughtItem {
+  content: string;
+  date: string;
+}
 
-const workItems: WorkItem[] = [
-  {
-    company: "Self-taught Learning & Building",
-    role: "Independent Developer & Learner",
-    details: "Dedicated to mastering software development through hands-on projects and continuous learning. Built several full-stack applications and explored various tech stacks, including Flutter, Node.js, AI integration, and backend technologies."
-  }
+const workItems: WorkItem[] = [{ company: "Tourease", role: "Solo Developer", details: "Turning concepts into reality while continuously learning and refining my skills." }];
+
+// Sample thought items
+const thoughtItems: ThoughtItem[] = [
+  { content: "Embracing challenges as opportunities for growth.", date: "September 2024" },
+  { content: "In the end, only one will stand.", date: "August 2024" },
+  { content: "At the end there will be a only one.", date: "September 2024" },
 ];
-
 const projectItems: ProjectItem[] = [
   {
     name: "Tourease",
-    description: "An AI-powered application designed to serve as a personalized tour guide, providing customized itineraries, local insights, and real-time travel recommendations.",
+    description: "An AI app providing personalized itineraries and real-time travel recommendations.",
     link: "#"
   },
   {
     name: "AI Chatbot",
-    description: "A conversational AI chatbot leveraging natural language processing to engage in human-like interactions, enhancing customer support and user experience.",
+    description: "A conversational AI that enhances customer support through human-like interactions.",
     link: "#"
   },
   {
-    name: "AI Image-Generator",
-    description: "A generative AI tool that transforms textual inputs into visually compelling images, using state-of-the-art machine learning techniques.",
+    name: "AI Image Generator",
+    description: "A tool that creates images from text using advanced machine learning techniques.",
     link: "#"
   }
 ];
 
+
 const writingItems: WritingItem[] = [
-  {
-    title: "My Journey to SF (In Progress)",
-    description: "A personal account documenting my experiences and challenges in building a startup, including insights on tech entrepreneurship and innovation.",
-    link: "#"
-  },
-  {
-    title: "-1 to 0 (In Progress)",
-    description: "A detailed narrative of how I transitioned into the AI field, starting from zero coding experience and building proficiency in artificial intelligence.",
-    link: "#"
-  }
-];
+  { title: "Turning to Reality (In Progress)",
+  description: "Exploring my plans and aspirations.",
+   link: "#" },
+  { title: "-1 to 0 (In Progress)",
+     description: "In this journey, I’m validating various ideas and seeing how many will succeed.", link: "#" }];
+
 
 export default function PortfolioLanding() {
   const [isDarkMode, setIsDarkMode] = useState(false)
@@ -117,16 +118,18 @@ export default function PortfolioLanding() {
             >
               View Projects
             </Button>
-            <Button
-             onClick={() => window.location.href = 'mailto:amitmasram831@gmail.com'}
-              className={`${isDarkMode ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-900 text-white hover:bg-gray-700'}`}
-            >
-              Contact Me
-            </Button>
+            <a href="mailto:amitmasram831@gmail.com">
+  <Button
+    className={`${isDarkMode ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-900 text-white hover:bg-gray-700'}`}
+  >
+    Get in Touch
+  </Button>
+</a>
+
           </div>
 
           <div className="mb-12">
-            <h2 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Work</h2>
+            <h2 className={`text-lg font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Work</h2>
             {workItems.map((item, index) => (
               <div key={index} className="mb-4">
                 <div
@@ -135,7 +138,7 @@ export default function PortfolioLanding() {
                 >
                   <div>
                     <h3 className="text-base font-semibold">{item.company}</h3>
-                    <p className="text-base">{item.role}</p>
+                    <p className="text-sm">{item.role}</p>
                   </div>
                   {expandedItem === index ?
                     <ChevronUp className="h-5 w-5" /> :
@@ -143,35 +146,45 @@ export default function PortfolioLanding() {
                   }
                 </div>
                 {expandedItem === index && (
-                  <p className="mt-2 text-sm">{item.details}</p>
+                  <p className="mt-2 text-sm text-gray-500">{item.details}</p>
                 )}
               </div>
             ))}
           </div>
 
           <div className="mb-12">
-            <h2 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
+            <h2 className={`text-lg font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
             {projectItems.map((item, index) => (
               <div key={index} className="mb-4">
                 <a href={item.link} className="block hover:underline">
                   <h3 className="text-base font-semibold">{item.name}</h3>
-                  <p className="text-sm">{item.description}</p>
+                  <p className="text-sm text-gray-500">{item.description}</p>
                 </a>
               </div>
             ))}
           </div>
 
           <div className="mb-12">
-            <h2 className={`text-xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Writings</h2>
+            <h2 className={`text-lg font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Writings</h2>
             {writingItems.map((item, index) => (
               <div key={index} className="mb-4">
                 <a href={item.link} className="block hover:underline">
                   <h3 className="text-base font-semibold">{item.title}</h3>
-                  <p className="text-sm">{item.description}</p>
+                  <p className="text-sm text-gray-500">{item.description}</p>
                 </a>
               </div>
             ))}
           </div>
+          <div className="mb-12">
+            <h2 className={`text-lg font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Thoughts</h2>
+            {thoughtItems.map((item, index) => (
+              <div key={index} className="mb-4">
+                <p className="text-sm">{item.content}</p>
+                <p className="text-xs text-gray-500">{item.date}</p>
+              </div>
+            ))}
+          </div>
+
         </main>
 
         <footer className="mt-13 flex flex-wrap justify-center gap-4 text-sm">
