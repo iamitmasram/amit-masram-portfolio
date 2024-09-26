@@ -40,7 +40,7 @@ const projectItems: ProjectItem[] = [
   {
     name: "Tourease",
     description: "An AI app providing personalized itineraries and real-time travel recommendations.",
-    link: "#"
+    link: "https://tourease.netlify.app/"
   },
   {
     name: "AI Chatbot",
@@ -99,7 +99,7 @@ export default function PortfolioLanding() {
 
           <div className="mb-12 space-y-4 text-left">
             <p className="text-m">
-              An Engineer, I’m currently building Tourease app, an AI-powered personalized tour guide for your travels,
+              An Engineer, I’m currently building <a href="https://tourease.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Tourease</a> app, an AI-powered personalized tour guide for your travels,
             </p>
             <p className="text-m">
               I enjoy learning to be a better engineer and thinker. Developing the foundation to build things and understand the world.
