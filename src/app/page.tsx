@@ -114,12 +114,12 @@ export default function PortfolioLanding() {
             </p>
           </div>
 
-          <div className="flex justify-center gap-4 mb-12">
+          {/* <div className="flex justify-center gap-4 mb-12">
             <Button
               variant="outline"
               className={`${isDarkMode ? 'text-gray-200 border-gray-200 hover:bg-gray-900' : 'text-gray-700 border-gray-700 hover:bg-gray-100'}`}
             >
-              View Projects
+              Hackathons
             </Button>
             <a href="mailto:amitmasram831@gmail.com">
   <Button
@@ -129,7 +129,7 @@ export default function PortfolioLanding() {
   </Button>
 </a>
 
-          </div>
+          </div> */}
 
           <div className="mb-12">
             <h2 className={`text-lg font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Work</h2>
@@ -186,6 +186,22 @@ export default function PortfolioLanding() {
                 <p className="text-xs text-gray-500">{item.date}</p>
               </div>
             ))}
+          </div>
+          <div className="flex justify-center gap-4 mb-12">
+            <Button
+              variant="outline"
+              className={`${isDarkMode ? 'text-gray-200 border-gray-200 hover:bg-gray-900' : 'text-gray-700 border-gray-700 hover:bg-gray-100'}`}
+            >
+              Hackathons
+            </Button>
+            <a href="mailto:amitmasram831@gmail.com">
+  <Button
+    className={`${isDarkMode ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-900 text-white hover:bg-gray-700'}`}
+  >
+    Get in Touch
+  </Button>
+</a>
+
           </div>
 
         </main>
