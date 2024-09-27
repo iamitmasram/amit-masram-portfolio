@@ -42,16 +42,17 @@ const projectItems: ProjectItem[] = [
     description: "An AI app providing personalized itineraries and real-time travel recommendations.",
     link: "https://tourease.netlify.app/"
   },
-  {
-    name: "AI Chatbot",
-    description: "A conversational AI that enhances customer support through human-like interactions.",
-    link: "#"
-  },
+  
   {
     name: "AI Image Generator",
     description: "A tool that creates images from text using advanced machine learning techniques.",
     link: "#"
-  }
+  },
+  {
+    name: "Clause AI",
+    description: "Building AI SaaS (Stealth Mode)",
+    link: "#"
+  },
 ];
 
 const writingItems: WritingItem[] = [
