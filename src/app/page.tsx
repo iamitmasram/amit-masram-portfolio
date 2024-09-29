@@ -199,7 +199,7 @@ export default function PortfolioLanding() {
           <Button 
               variant="outline" 
               className={`${isDarkMode ? 'text-gray-200 border-gray-200 hover:bg-gray-900' : 'text-gray-700 border-gray-700 hover:bg-gray-100'}`}
-             // onClick={navigateToHackathons}
+              onClick={navigateToHackathons}
             >
               Hackathons
             </Button>
