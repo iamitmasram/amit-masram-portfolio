@@ -191,7 +191,7 @@ export default function PortfolioLanding() {
             {thoughtItems.map((item, index) => (
               <div key={index} className="mb-4">
                 <p className="text-[14px]">{item.content}</p>
-                <p className="text-[11px] text-gray-500">{item.date}</p>
+                <p className="text-[12px] text-gray-500">{item.date}</p>
               </div>
             ))}
           </div>
@@ -199,7 +199,7 @@ export default function PortfolioLanding() {
           <Button 
               variant="outline" 
               className={`${isDarkMode ? 'text-gray-200 border-gray-200 hover:bg-gray-900' : 'text-gray-700 border-gray-700 hover:bg-gray-100'}`}
-              onClick={navigateToHackathons}
+             // onClick={navigateToHackathons}
             >
               Hackathons
             </Button>
