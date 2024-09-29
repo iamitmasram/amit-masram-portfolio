@@ -3,6 +3,9 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Moon, Sun, ChevronDown, ChevronUp } from "lucide-react"
+import { useRouter } from 'next/navigation'
+import { useDarkMode } from "@/lib/useDarkMode"
+
 
 interface WorkItem {
   company: string;
@@ -65,13 +68,18 @@ const writingItems: WritingItem[] = [
 
 
 export default function PortfolioLanding() {
-  const [isDarkMode, setIsDarkMode] = useState(false)
   const [expandedItem, setExpandedItem] = useState<number | null>(null)
+  const router = useRouter()
+  const { isDarkMode, toggleDarkMode } = useDarkMode()
+  // const [isDarkMode, setIsDarkMode] = useState(false)
+  // const [expandedItem, setExpandedItem] = useState<number | null>(null)
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode)
+  // const toggleDarkMode = () => {
+  //   setIsDarkMode(!isDarkMode)
+  // }
+  const navigateToHackathons = () => {
+    router.push('/hackathons')
   }
-
   const toggleExpand = (index: number) => {
     setExpandedItem(expandedItem === index ? null : index)
   }
@@ -132,7 +140,7 @@ export default function PortfolioLanding() {
           </div> */}
 
           <div className="mb-12">
-            <h2 className={`text-lg font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Work</h2>
+            <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Work</h2>
             {workItems.map((item, index) => (
               <div key={index} className="mb-4">
                 <div
@@ -140,7 +148,7 @@ export default function PortfolioLanding() {
                   onClick={() => toggleExpand(index)}
                 >
                   <div>
-                    <h3 className="text-base font-semibold">{item.company}</h3>
+                  <h3 className="text-[15px] font-semibold">{item.company}</h3>
                     <p className="text-sm">{item.role}</p>
                   </div>
                   {expandedItem === index ?
@@ -156,11 +164,11 @@ export default function PortfolioLanding() {
           </div>
 
           <div className="mb-12">
-            <h2 className={`text-lg font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
+            <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
             {projectItems.map((item, index) => (
               <div key={index} className="mb-4">
                 <a href={item.link} className="block hover:underline">
-                  <h3 className="text-base/relaxed font-semibold">{item.name}</h3>
+                <h3 className="text-[15px] font-semibold">{item.name}</h3>
                   <p className="text-sm text-gray-500">{item.description}</p>
                 </a>
               </div>
@@ -168,34 +176,35 @@ export default function PortfolioLanding() {
           </div>
 
           <div className="mb-12">
-            <h2 className={`text-lg font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Writings</h2>
+            <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Writings</h2>
             {writingItems.map((item, index) => (
               <div key={index} className="mb-4">
                 <a href={item.link} className="block hover:underline">
-                  <h3 className="text-base font-semibold">{item.title}</h3>
+                <h3 className="text-[15px] font-semibold">{item.title}</h3>
                   <p className="text-sm text-gray-500">{item.description}</p>
                 </a>
               </div>
             ))}
           </div>
           <div className="mb-12">
-            <h2 className={`text-lg font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Thoughts</h2>
+            <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Thoughts</h2>
             {thoughtItems.map((item, index) => (
               <div key={index} className="mb-4">
-                <p className="text-sm">{item.content}</p>
-                <p className="text-xs text-gray-500">{item.date}</p>
+                <p className="text-[14px]">{item.content}</p>
+                <p className="text-[11px] text-gray-500">{item.date}</p>
               </div>
             ))}
           </div>
           <div className="flex justify-center gap-4 mb-12">
-            <Button
-              variant="outline"
+          <Button 
+              variant="outline" 
               className={`${isDarkMode ? 'text-gray-200 border-gray-200 hover:bg-gray-900' : 'text-gray-700 border-gray-700 hover:bg-gray-100'}`}
+              onClick={navigateToHackathons}
             >
               Hackathons
             </Button>
             <a href="mailto:amitmasram831@gmail.com">
-  <Button
+            <Button
     className={`${isDarkMode ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-900 text-white hover:bg-gray-700'}`}
   >
     Get in Touch
