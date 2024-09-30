@@ -179,7 +179,7 @@ export default function PortfolioLanding() {
       <img
         src={item.image || "https://via.placeholder.com/60"} // Placeholder if no image
         alt={item.name}
-        className="w-6 h-6 object-cover rounded-md" // Adjusted size
+        className="w-7 h-7 object-cover rounded-md" // Adjusted size
       />
       <div>
         <a href={item.link} className="block hover:underline">
