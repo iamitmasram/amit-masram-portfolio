@@ -51,7 +51,7 @@ const projectItems: ProjectItem[] = [
     name: "Onero",
     description: "A app that creates stunning AI images from text prompts.",
     link: "#",
-    image:"https://s7.ezgif.com/tmp/ezgif-7-6d04238725.png"
+    image:"https://cdn.dribbble.com/userupload/10918702/file/original-6fe167d3e7dfbc6cadf6017535750a66.jpg?resize=1200x900"
   },
   {
     name: "Clause AI",
