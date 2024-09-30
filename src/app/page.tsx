@@ -16,6 +16,7 @@ interface ProjectItem {
   name: string;
   description: string;
   link: string;
+  image:string;
 }
 
 interface WritingItem {
@@ -43,18 +44,20 @@ const projectItems: ProjectItem[] = [
   {
     name: "Tourease",
     description: "An AI app providing personalized itineraries and real-time travel recommendations.",
-    link: "https://tourease.netlify.app/"
+    link: "https://tourease.netlify.app/",
+    image:"https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
   },
-  
   {
-    name: "AI Image Generator",
-    description: "A tool that creates images from text using advanced machine learning techniques.",
-    link: "#"
+    name: "Onero",
+    description: "A app that creates stunning AI images from text prompts.",
+    link: "#",
+    image:"https://s7.ezgif.com/tmp/ezgif-7-6d04238725.png"
   },
   {
     name: "Clause AI",
     description: "Building AI SaaS (Stealth Mode)",
-    link: "#"
+    link: "#",
+    image:"https://avatars.githubusercontent.com/u/183131669?s=200&v=4"
   },
 ];
 
@@ -79,6 +82,10 @@ export default function PortfolioLanding() {
   // }
   const navigateToHackathons = () => {
     router.push('/hackathons')
+  }
+
+  const navigateToOpenSource = () => {
+    router.push('/opensource')
   }
   const toggleExpand = (index: number) => {
     setExpandedItem(expandedItem === index ? null : index)
@@ -113,6 +120,8 @@ export default function PortfolioLanding() {
             <p className="text-m">
               I enjoy learning to be a better engineer and thinker. Developing the foundation to build things and understand the world.
               Building Full-Stack Apps with AI and diving deep into Prompt Engineering to be able to better communicate with AI effectively.
+              {/* I like to do <span onClick={navigateToHackathons} className="text-blue-600 hover:underline cursor-pointer">Hackathons</span> &nbsp;&
+              <span onClick={navigateToOpenSource} className="text-blue-600 hover:underline cursor-pointer"> OpenSource</span> */}
             </p>
             <p className="text-m">
               I am also set on moving to SF after graduation to further my journey in tech.
@@ -164,6 +173,25 @@ export default function PortfolioLanding() {
           </div>
 
           <div className="mb-12">
+  <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
+  {projectItems.map((item, index) => (
+    <div key={index} className="mb-4 flex items-start gap-4">
+      <img
+        src={item.image || "https://via.placeholder.com/60"} // Placeholder if no image
+        alt={item.name}
+        className="w-6 h-6 object-cover rounded-md" // Adjusted size
+      />
+      <div>
+        <a href={item.link} className="block hover:underline">
+          <h3 className="text-[15px] font-semibold">{item.name}</h3>
+          <p className="text-sm text-gray-500">{item.description}</p>
+        </a>
+      </div>
+    </div>
+  ))}
+</div>
+
+          {/* <div className="mb-12">
             <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
             {projectItems.map((item, index) => (
               <div key={index} className="mb-4">
@@ -173,7 +201,7 @@ export default function PortfolioLanding() {
                 </a>
               </div>
             ))}
-          </div>
+          </div> */}
 
           <div className="mb-12">
             <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Writings</h2>
