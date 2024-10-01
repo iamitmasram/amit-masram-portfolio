@@ -124,11 +124,12 @@ export default function PortfolioLanding() {
               <span onClick={navigateToOpenSource} className="text-blue-600 hover:underline cursor-pointer"> OpenSource</span> */}
             </p>
             <p className="text-m">
-              I am also set on moving to SF after graduation to further my journey in tech.
+              {/* I'm also set on moving to SF after graduation to further my journey in tech. */}
+              Beyond that, I like to travel and try new things.
             </p>
-            <p className="text-m">
+            {/* <p className="text-m">
               Beyond tech, I like to travel and wildlife, which inspires and enriches my professional and personal life.
-            </p>
+            </p> */}
           </div>
 
           {/* <div className="flex justify-center gap-4 mb-12">
