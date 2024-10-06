@@ -40,7 +40,7 @@ const hackathons: HackathonEntry[] = [
     date: "October 1st - 31st, 2024",
     name: "Appwrite’s Hacktoberfest",
     location: "Online",
-    description: "Developed an application which communicates a victim's medical data from inside an ambulance to doctors at hospital.",
+    description: "Built EventSphere, App for discovering nearby events like concerts and conferences, offering personalized recommendations, easy registration, and map-based navigation.",
     tags: [],
     sourceUrl: "https://github.com/example/firstnet-hackathon",
     imageUrl:"https://tse2.mm.bing.net/th?id=OIP.hBVeaWT9eAvx2-oKMtKmxwAAAA&pid=Api&P=0&h=180"

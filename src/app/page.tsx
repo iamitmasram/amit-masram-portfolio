@@ -54,10 +54,10 @@ const projectItems: ProjectItem[] = [
     image:"https://cdn.dribbble.com/userupload/10918702/file/original-6fe167d3e7dfbc6cadf6017535750a66.jpg?resize=1200x900"
   },
   {
-    name: "Clause AI",
-    description: "Building AI SaaS (Stealth Mode)",
+    name: "Legaly",
+    description: "Building B2B AI-SaaS (Stealth Mode)",
     link: "#",
-    image:"https://avatars.githubusercontent.com/u/183131669?s=200&v=4"
+    image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
   },
 ];
 
@@ -125,7 +125,7 @@ export default function PortfolioLanding() {
             </p>
             <p className="text-m">
               {/* I'm also set on moving to SF after graduation to further my journey in tech. */}
-              Beyond that, I like to travel and try new things.
+              I participate in <span onClick={navigateToHackathons} className="text-blue-600 hover:underline cursor-pointer" >hackathons</span> and contribute to <span onClick={navigateToOpenSource} className="text-blue-600 hover:underline cursor-pointer">opensource</span> Beyond that, I like to read and try new things.
             </p>
             {/* <p className="text-m">
               Beyond tech, I like to travel and wildlife, which inspires and enriches my professional and personal life.
@@ -224,14 +224,15 @@ export default function PortfolioLanding() {
               </div>
             ))}
           </div>
-          <div className="flex justify-center gap-4 mb-12">
-          <Button 
+          <div className="flex flex-col items-center gap-4 mb-8">
+          {/* <div className="flex justify-center gap-4 mb-12"> */}
+          {/* <Button 
               variant="outline" 
               className={`${isDarkMode ? 'text-gray-200 border-gray-200 hover:bg-gray-900' : 'text-gray-700 border-gray-700 hover:bg-gray-100'}`}
               onClick={navigateToHackathons}
             >
               Hackathons
-            </Button>
+            </Button> */}
             <a href="mailto:amitmasram831@gmail.com">
             <Button
     className={`${isDarkMode ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-900 text-white hover:bg-gray-700'}`}
@@ -239,8 +240,9 @@ export default function PortfolioLanding() {
     Get in Touch
   </Button>
 </a>
-
+<p className="text-[14px] text-center">Reach out if you want to chat, you can usually find me on Twitter.</p>
           </div>
+          
 
         </main>
 
@@ -254,3 +256,5 @@ export default function PortfolioLanding() {
     </div>
   )
 }
+
+
