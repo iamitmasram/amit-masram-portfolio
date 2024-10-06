@@ -115,7 +115,7 @@ export default function PortfolioLanding() {
 
           <div className="mb-12 space-y-4 text-left">
             <p className="text-m">
-              An Engineer, I’m currently building <a href="https://tourease.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Tourease</a> app, an AI-powered personalized tour guide for your travels,
+              I’m currently building <a href="https://tourease.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Tourease</a> app, an AI-powered personalized tour guide for your travels,
             </p>
             <p className="text-m">
               I enjoy learning to be a better engineer and thinker. Developing the foundation to build things and understand the world.
@@ -125,7 +125,7 @@ export default function PortfolioLanding() {
             </p>
             <p className="text-m">
               {/* I'm also set on moving to SF after graduation to further my journey in tech. */}
-              I participate in <span onClick={navigateToHackathons} className="text-blue-600 hover:underline cursor-pointer" >hackathons</span> and contribute to <span onClick={navigateToOpenSource} className="text-blue-600 hover:underline cursor-pointer">opensource</span> Beyond that, I like to read and try new things.
+              I take part in <span onClick={navigateToHackathons} className="text-blue-600 hover:underline cursor-pointer" >hackathons</span> and contribute to <span onClick={navigateToOpenSource} className="text-blue-600 hover:underline cursor-pointer">opensource</span>. Beyond that, I like to read and try new things.
             </p>
             {/* <p className="text-m">
               Beyond tech, I like to travel and wildlife, which inspires and enriches my professional and personal life.
