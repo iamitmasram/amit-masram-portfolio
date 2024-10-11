@@ -41,6 +41,7 @@ const thoughtItems: ThoughtItem[] = [
 ];
 
 const projectItems: ProjectItem[] = [
+
   {
     name: "Tourease",
     description: "An AI app providing personalized itineraries and real-time travel recommendations.",
@@ -48,17 +49,18 @@ const projectItems: ProjectItem[] = [
     image:"https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
   },
   {
+    name: "Legaly AI",
+    description: "Building B2B AI-SaaS (Stealth Mode)",
+    link: "https://legalyai.co/",
+    image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
+  },
+  {
     name: "Onero",
-    description: "A app that creates stunning AI images from text prompts.",
+    description: "The Messenger AI Agent - In progress...",
     link: "#",
     image:"https://cdn.dribbble.com/userupload/10918702/file/original-6fe167d3e7dfbc6cadf6017535750a66.jpg?resize=1200x900"
   },
-  {
-    name: "Legaly",
-    description: "Building B2B AI-SaaS (Stealth Mode)",
-    link: "#",
-    image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
-  },
+
 ];
 
 const writingItems: WritingItem[] = [

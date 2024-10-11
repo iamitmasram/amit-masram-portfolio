@@ -20,13 +20,14 @@ interface OpenSourceEntry {
 const hackathons: OpenSourceEntry[] = [
   {
     date: "October 4th - 10th, 2024",
-    name: "Global Hack Week: Open Source ",
+    name: "Global Hack Week: Open Source",
     location: "Remote",
-    description: "Developed an AI application that delivered real-time access to patients using augmented reality.",
+    description: "I participated in the Global Hack Week: Open Source 2024, completing all of Auth0's challenges, including setting up an Auth0 account, starring an open-source project, implementing login/logout functionality, customizing the login box, and sharing my progress on social media. It was an incredible opportunity to dive deeper into Auth0's tools and contribute to open source, all while learning and building with a global community.",
     tags: [],
-    sourceUrl: "https://github.com/example/hack-western-5",
-    imageUrl: "https://s3.amazonaws.com/my.mlh.io/applications/logos/000/000/638/thumb/MyMLH_Icon.png?1638895540"
-  },
+    sourceUrl: "https://github.com/Amitmasram/auth0-vite-app",
+    imageUrl : "https://tse1.mm.bing.net/th?id=OIP.Z9sMcPgkxX1bt9VIbN9xSAAAAA&pid=Api&P=0&h=180"
+},
+
   {
     date: "October 11th - 13th, 2024",
     name: "Open Source Hackfest",
@@ -34,7 +35,16 @@ const hackathons: OpenSourceEntry[] = [
     description: "Built a Web3 mobile app utilizing decentralized smart contracts for secure real-time data communication.",
     tags: [],
     sourceUrl: "https://github.com/example/hack-the-north",
-    imageUrl:"https://s3.amazonaws.com/my.mlh.io/applications/logos/000/000/638/thumb/MyMLH_Icon.png?1638895540"
+    imageUrl:"https://tse1.mm.bing.net/th?id=OIP.Z9sMcPgkxX1bt9VIbN9xSAAAAA&pid=Api&P=0&h=180"
+  },
+  {
+    date: "October 2nd - 3rd Nov, 2024",
+    name: "Hacktoberfest 2024 ",
+    location: "Online",
+    description: "Built a Web3 mobile app utilizing decentralized smart contracts for secure real-time data communication.",
+    tags: [],
+    sourceUrl: "https://github.com/example/hack-the-north",
+    imageUrl:"https://dev-to-uploads.s3.amazonaws.com/uploads/articles/12t9r8j7n9ynxbdzhs5p.png"
   },
  
 ]
@@ -50,7 +60,7 @@ export default function OpenSourcePage() {
           <h1 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-black'}`}>Open Source Contributions</h1>
         </div>
         <p className="text-white-600 mb-8">
-          Here are my contributions to open source, where I collaborate with diverse teams to solve challenges and build innovative projects.
+        Here are my contributions to various open source projects and events:
         </p>
         
         <div className="space-y-8">

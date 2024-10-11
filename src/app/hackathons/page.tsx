@@ -42,7 +42,7 @@ const hackathons: HackathonEntry[] = [
     location: "Online",
     description: "Built EventSphere, App for discovering nearby events like concerts and conferences, offering personalized recommendations, easy registration, and map-based navigation.",
     tags: [],
-    sourceUrl: "https://github.com/example/firstnet-hackathon",
+    sourceUrl: "https://github.com/Amitmasram/EventSphere-Hacktoberfest-2024",
     imageUrl:"https://tse2.mm.bing.net/th?id=OIP.hBVeaWT9eAvx2-oKMtKmxwAAAA&pid=Api&P=0&h=180"
 
   },
