@@ -49,18 +49,53 @@ const projectItems: ProjectItem[] = [
     image:"https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
   },
   {
-    name: "Legaly AI",
+    name: "Legaly",
     description: "Building B2B AI-SaaS (Stealth Mode)",
     link: "https://legalyai.co/",
     image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
   },
   {
-    name: "Onero",
+    name: "SnipAI",
     description: "The Messenger AI Agent - In progress...",
-    link: "#",
-    image:"https://cdn.dribbble.com/userupload/10918702/file/original-6fe167d3e7dfbc6cadf6017535750a66.jpg?resize=1200x900"
+    link: "https://trysnipai.co/",
+    image:"https://i.pinimg.com/564x/6b/0a/3a/6b0a3a3e6d3009793e96e2b2e99475ac.jpg"
   },
-
+  // {
+  //   name: "SnipAI",
+  //   description: "Building B2B AI-SaaS (Stealth Mode)",
+  //   link: "https://legalyai.co/",
+  //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
+  // },
+  // {
+  //   name: "LearnifyAI",
+  //   description: "Building B2B AI-SaaS (Stealth Mode)",
+  //   link: "https://legalyai.co/",
+  //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
+  // },
+  // {
+  //   name: "SapioAI",
+  //   description: "Building B2B AI-SaaS (Stealth Mode)",
+  //   link: "https://legalyai.co/",
+  //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
+  // },
+  // {
+  //   name: "Altery",
+  //   description: "Building B2B AI-SaaS (Stealth Mode)",
+  //   link: "https://legalyai.co/",
+  //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
+  // },
+  // {
+  //   name: "MarketLaunch",
+  //   description: "Building B2B AI-SaaS (Stealth Mode)",
+  //   link: "https://legalyai.co/",
+  //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
+  // },
+  // {
+  //   name: "Legaly AI",
+  //   description: "Building B2B AI-SaaS (Stealth Mode)",
+  //   link: "https://legalyai.co/",
+  //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
+  // },
 ];
 
 const writingItems: WritingItem[] = [

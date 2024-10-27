@@ -38,14 +38,15 @@ const hackathons: OpenSourceEntry[] = [
     imageUrl:"https://tse1.mm.bing.net/th?id=OIP.Z9sMcPgkxX1bt9VIbN9xSAAAAA&pid=Api&P=0&h=180"
   },
   {
-    date: "October 2nd - 3rd Nov, 2024",
-    name: "Hacktoberfest 2024 ",
+    date: "October 1st - 10th Nov, 2024",
+    name: "GSSoC 2024Extd",
     location: "Online",
-    description: "Built a Web3 mobile app utilizing decentralized smart contracts for secure real-time data communication.",
+    description: "participated and contributing to the various projects.",
     tags: [],
     sourceUrl: "https://github.com/example/hack-the-north",
-    imageUrl:"https://dev-to-uploads.s3.amazonaws.com/uploads/articles/12t9r8j7n9ynxbdzhs5p.png"
+    imageUrl:"https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png"
   },
+
  
 ]
 
