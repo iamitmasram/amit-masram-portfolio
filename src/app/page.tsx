@@ -49,6 +49,12 @@ const projectItems: ProjectItem[] = [
     image:"https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
   },
   {
+    name: "Hometro",
+    description: "Find the homes and rentals properies within your city on a exclusive deals ",
+    link: "https://hometro.co/",
+    image:"https://www.imghost.net/ib/LxJZBOpht4Uqe4R_1730513430.jpg"
+  },
+  {
     name: "Legaly",
     description: "Building B2B AI-SaaS (Stealth Mode)",
     link: "https://legalyai.co/",

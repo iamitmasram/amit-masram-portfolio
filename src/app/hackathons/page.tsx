@@ -27,15 +27,15 @@ const hackathons: HackathonEntry[] = [
     sourceUrl: "https://github.com/example/hack-western-5",
     imageUrl: "https://miro.medium.com/max/2400/1*Z2HkOhqHhYoaTTLPEsZMGg.png" // Add this line
   },
-  {
-    date: "October 1st - 16th, 2024",
-    name: "Aptos Code Collision Hackathon",
-    location: "Online",
-    description: "Built a Web3 mobile app utilizing decentralized smart contracts for secure real-time data communication.",
-    tags: [],
-    sourceUrl: "https://github.com/example/hack-the-north",
-    imageUrl:"https://aptosfoundation.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcode-collision_hero-image.f43f60aa.webp&w=2160&q=85"
-  },
+  // {
+  //   date: "October 1st - 16th, 2024",
+  //   name: "Aptos Code Collision Hackathon",
+  //   location: "Online",
+  //   description: "Built a Web3 mobile app utilizing decentralized smart contracts for secure real-time data communication.",
+  //   tags: [],
+  //   sourceUrl: "https://github.com/example/hack-the-north",
+  //   imageUrl:"https://aptosfoundation.org/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fcode-collision_hero-image.f43f60aa.webp&w=2160&q=85"
+  // },
   {
     date: "October 1st - 31st, 2024",
     name: "Appwrite’s Hacktoberfest",
@@ -47,25 +47,16 @@ const hackathons: HackathonEntry[] = [
 
   },
   {
-    date: "October 18th - 19th, 2024",
-    name: "Bincom Hackathon",
+    date: "October 21th - December 17, 2024",
+    name: "LLM Agents MOOC Hackathon",
     location: "Online",
-    description: "Created an app in just 24 hours during this hackathon, where participants had only 24 hours to grind and build something amazing using genAI tools like Gemini and GPT.",
+    description: "Createing an AI message agent which will automate your messages across the platforms via SnipAI.",
     tags: [],
-    sourceUrl: "https://github.com/example/firstnet-hackathon",
-    imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbBIH1i8BHXwahzFmQ6aGcZvEY3WXRwgptWg&s"
+    sourceUrl: "https://trysnipai.co/",
+    imageUrl:"https://tse4.mm.bing.net/th?id=OIP.SuN4hrD97rwJJu90dyuO_QHaEK&pid=Api&P=0&h=180"
 
   },
-  {
-    date: "October 22nd - 26th, 2024",
-    name: "Worldwide AI Hackathon 2024",
-    location: "Online",
-    description: "I built an AI image generator app using Midjourney in this 6-day hackathon focused on Computer Vision!",
-    tags: [],
-    sourceUrl: "https://github.com/example/firstnet-hackathon",
-    imageUrl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbf5rmE7Wk--4TNZ3BC4wK9qpLIl_0R4j-7Q&s"
 
-  },
   
 ]
 
