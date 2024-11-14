@@ -276,7 +276,7 @@ export default function PortfolioLanding() {
             >
               Hackathons
             </Button> */}
-            <a href="mailto:amitmasram831@gmail.com">
+            <a href="mailto:amitxmasram@gmail.com">
             <Button
     className={`${isDarkMode ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-900 text-white hover:bg-gray-700'}`}
   >
