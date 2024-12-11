@@ -36,8 +36,8 @@ const workItems: WorkItem[] = [{ company: "Tourease", role: "Solo Developer", de
 // Sample thought items
 const thoughtItems: ThoughtItem[] = [
   { content: "Create, iterate, and evolve.", date: "September 2024" },
-  { content: "Vision is nothing without execution.", date: "September 2024" },
-  { content: "In the end, only one will stand.", date: "August 2024" },
+  { content: "whatever it takes to build it. just build it.", date: "December 2024" },
+  { content: "Make the right decision to do the right thing.", date: "December 2024" },
 ];
 
 const projectItems: ProjectItem[] = [
