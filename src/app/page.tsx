@@ -137,7 +137,17 @@ export default function PortfolioLanding() {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-black text-gray-200' : 'bg-white text-gray-700'} transition-colors duration-300`}>
       <div className="flex flex-col items-center justify-center p-4 min-h-screen">
-        <Button
+
+      <Button
+          size="icon"
+          className={`absolute top-4 right-4 md:top-8 md:right-8 ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}
+          onClick={toggleDarkMode}
+        >
+          {isDarkMode ? <Sun className="h-[1.2rem] w-[1.2rem]" /> : <Moon className="h-[1.2rem] w-[1.2rem]" />}
+          <span className="sr-only">Toggle theme</span>
+        </Button>
+
+        {/* <Button
           variant="outline"
           size="icon"
           className={`absolute top-4 right-4 md:top-8 md:right-8 ${isDarkMode ? 'text-gray-200 border-gray-200' : 'text-gray-700 border-gray-700'}`}
@@ -145,15 +155,15 @@ export default function PortfolioLanding() {
         >
           {isDarkMode ? <Sun className="h-[1.2rem] w-[1.2rem]" /> : <Moon className="h-[1.2rem] w-[1.2rem]" />}
           <span className="sr-only">Toggle theme</span>
-        </Button>
+        </Button> */}
 
         <main className="max-w-2xl w-full p-6">
           <h1 className={`text-4xl md:text-6xl font-bold mb-6 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Amit Masram</h1>
           <p className="text-sm mb-8 text-center">
             {/* <a href="mailto:amitmasram831@gmail.com" className="hover:underline">Email</a> | */}
-            <a href="https://x.com/AmitMasram10" target="_blank" rel="noopener noreferrer" className="hover:underline"> Twitter</a> |
-            <a href="https://www.linkedin.com/in/amit-masram/" target="_blank" rel="noopener noreferrer" className="hover:underline"> LinkedIn</a> |
-            <a href="https://github.com/Amitmasram" target="_blank" rel="noopener noreferrer" className="hover:underline"> GitHub</a>
+            <a href="https://x.com/amitxmasram" target="_blank" rel="noopener noreferrer" className="hover:underline"> Twitter</a> |
+            <a href="https://www.linkedin.com/in/amitmasram/" target="_blank" rel="noopener noreferrer" className="hover:underline"> LinkedIn</a> |
+            <a href="https://github.com/amitmasram" target="_blank" rel="noopener noreferrer" className="hover:underline"> GitHub</a>
           </p>
 
           <div className="mb-12 space-y-4 text-left">
@@ -289,11 +299,11 @@ export default function PortfolioLanding() {
 
         </main>
 
-        <footer className="mt-13 flex flex-wrap justify-center gap-4 text-sm">
+        {/* <footer className="mt-13 flex flex-wrap justify-center gap-4 text-sm">
           <p className={`px-3 py-1 rounded-full ${isDarkMode ? 'bg-gray-900 text-gray-200' : 'bg-gray-100 text-gray-700'}`}>
             © {new Date().getFullYear()} Amit Masram. All rights reserved.
           </p>
-        </footer>
+        </footer> */}
 
       </div>
     </div>
