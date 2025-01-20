@@ -171,8 +171,8 @@ export default function PortfolioLanding() {
               I’m currently building <a href="https://tourease.us/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Tourease</a> app, an AI-powered personalized tour guide for your travels,
             </p>
             <p className="text-m">
-              I enjoy learning to be a better engineer and thinker. Developing the foundation to build things and understand the world.
-              Building Full-Stack Apps with AI and diving deep into Prompt Engineering to be able to better communicate with AI effectively.
+              I enjoy learning to be a better engineer and thinker, developing the foundation to build things and understand the world.
+              I specialize in building full-stack apps.
               {/* I like to do <span onClick={navigateToHackathons} className="text-blue-600 hover:underline cursor-pointer">Hackathons</span> &nbsp;&
               <span onClick={navigateToOpenSource} className="text-blue-600 hover:underline cursor-pointer"> OpenSource</span> */}
             </p>
