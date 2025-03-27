@@ -30,7 +30,7 @@ interface ThoughtItem {
   date: string;
 }
 
-const workItems: WorkItem[] = [{ company: "Tourease", role: "Solo Developer", details: "Turning concepts into reality while continuously learning and refining my skills." }];
+const workItems: WorkItem[] = [{ company: "Tourease", role: "Full-Stack Engineer", details: "Turning concepts into reality while continuously learning and refining my skills." }];
 
 
 // Sample thought items
@@ -161,7 +161,7 @@ export default function PortfolioLanding() {
           <h1 className={`text-4xl md:text-6xl font-bold mb-6 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Amit Masram</h1>
           <p className="text-sm mb-8 text-center">
             {/* <a href="mailto:amitmasram831@gmail.com" className="hover:underline">Email</a> | */}
-            <a href="https://x.com/amitxmasram" target="_blank" rel="noopener noreferrer" className="hover:underline"> Twitter</a> |
+            <a href="https://x.com/amitxmasram" target="_blank" rel="noopener noreferrer" className="hover:underline"> X</a> |
             <a href="https://www.linkedin.com/in/amitmasram/" target="_blank" rel="noopener noreferrer" className="hover:underline"> LinkedIn</a> |
             <a href="https://github.com/amitmasram" target="_blank" rel="noopener noreferrer" className="hover:underline"> GitHub</a>
           </p>
@@ -293,7 +293,7 @@ export default function PortfolioLanding() {
     Get in Touch
   </Button>
 </a>
-<p className="text-[14px] text-center">Reach out if you want to chat, you can usually find me on Twitter.</p>
+<p className="text-[14px] text-center">Reach out if you want to chat, you can usually find me on X.</p>
           </div>
           
 
