@@ -5,7 +5,8 @@ import { Avatar } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Github, Moon, Sun } from "lucide-react"
 import { useRouter } from 'next/navigation'
-import { useDarkMode } from "@/lib/useDarkMode" 
+import { useDarkMode } from "@/lib/useDarkMode"
+import Image from 'next/image'
 
 interface OpenSourceEntry {
   date: string
@@ -70,10 +71,12 @@ export default function OpenSourcePage() {
               <div className="flex-shrink-0 mr-4">
                 <Avatar className="w-9 h-9 flex items-center justify-center overflow-hidden">
                   {hackathon.imageUrl ? (
-                    <img 
+                    <Image 
                       src={hackathon.imageUrl} 
                       alt={hackathon.name} 
-                      className="w-full h-full object-cover" 
+                      width={36}
+                      height={36}
+                      className="object-cover" 
                     />
                   ) : (
                     <span className="text-xl">{hackathon.name[0]}</span>

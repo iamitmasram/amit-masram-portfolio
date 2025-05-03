@@ -5,12 +5,15 @@ import { Button } from "@/components/ui/button"
 import { Moon, Sun, ChevronDown, ChevronUp } from "lucide-react"
 import { useRouter } from 'next/navigation'
 import { useDarkMode } from "@/lib/useDarkMode"
+import Image from 'next/image'
 
 
 interface WorkItem {
   company: string;
   role: string;
   details: string;
+  image?: string;
+  link?: string;
 }
 interface ProjectItem {
   name: string;
@@ -30,7 +33,16 @@ interface ThoughtItem {
   date: string;
 }
 
-const workItems: WorkItem[] = [{ company: "Tourease", role: "Full-Stack Engineer", details: "Turning concepts into reality while continuously learning and refining my skills." }];
+
+const workItems: WorkItem[] = [
+  { 
+    company: "Delaplex", 
+    role: "Software Developer Intern", 
+    details: "Working on mobile app development team, specializing in Flutter and Firebase. Building cross-platform applications and implementing real-time features & services.",
+    image: "https://s3-symbol-logo.tradingview.com/delaplex-ltd--600.png",
+    link: "https://delaplex.com/"
+  }
+];
 
 
 // Sample thought items
@@ -110,7 +122,7 @@ const writingItems: WritingItem[] = [
     link: "#" },
 
   { title: "-1 to 0 (In Progress)",
-     description: "In this journey, I’m validating various ideas and seeing how many will succeed.", link: "#" }];
+     description: "In this journey, I'm validating various ideas and seeing how many will succeed.", link: "#" }];
 
 
 export default function PortfolioLanding() {
@@ -168,7 +180,7 @@ export default function PortfolioLanding() {
 
           <div className="mb-12 space-y-4 text-left">
             <p className="text-m">
-              I’m currently building <a href="https://tourease.us/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Tourease</a> app, an AI-powered personalized tour guide for your travels,
+              I&apos;m currently building <a href="https://tourease.us/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Tourease</a> app, an AI-powered personalized tour guide for your travels,
             </p>
             <p className="text-m">
               I enjoy learning to be a better engineer and thinker, developing the foundation to build things and understand the world.
@@ -210,9 +222,22 @@ export default function PortfolioLanding() {
                   className="flex justify-between items-center cursor-pointer"
                   onClick={() => toggleExpand(index)}
                 >
-                  <div>
-                  <h3 className="text-[15px] font-semibold">{item.company}</h3>
-                    <p className="text-sm">{item.role}</p>
+                  <div className="flex items-center gap-4">
+                    {item.image && (
+                      <Image
+                        src={item.image}
+                        alt={item.company}
+                        width={28}
+                        height={28}
+                        className="object-cover rounded-md"
+                      />
+                    )}
+                    <div>
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                        <h3 className="text-[15px] font-semibold">{item.company}</h3>
+                      </a>
+                      <p className="text-sm">{item.role}</p>
+                    </div>
                   </div>
                   {expandedItem === index ?
                     <ChevronUp className="h-5 w-5" /> :
@@ -230,10 +255,12 @@ export default function PortfolioLanding() {
   <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
   {projectItems.map((item, index) => (
     <div key={index} className="mb-4 flex items-start gap-4">
-      <img
-        src={item.image || "https://via.placeholder.com/60"} // Placeholder if no image
+      <Image
+        src={item.image || "https://via.placeholder.com/60"}
         alt={item.name}
-        className="w-7 h-7 object-cover rounded-md" // Adjusted size
+        width={28}
+        height={28}
+        className="object-cover rounded-md"
       />
       <div>
         <a href={item.link} className="block hover:underline">

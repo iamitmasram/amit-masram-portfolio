@@ -5,7 +5,8 @@ import { Avatar } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { Github, Moon, Sun } from "lucide-react"
 import { useRouter } from 'next/navigation'
-import { useDarkMode } from "@/lib/useDarkMode" 
+import { useDarkMode } from "@/lib/useDarkMode"
+import Image from 'next/image'
 
 interface HackathonEntry {
   date: string
@@ -25,7 +26,7 @@ const hackathons: HackathonEntry[] = [
     description: "Developed an AI application which delivered real-time access to patients using augmented reality.",
     tags: [],
     sourceUrl: "https://github.com/example/hack-western-5",
-    imageUrl: "https://miro.medium.com/max/2400/1*Z2HkOhqHhYoaTTLPEsZMGg.png" // Add this line
+    imageUrl: "https://miro.medium.com/v2/resize:fit:2400/1*Z2HkOhqHhYoaTTLPEsZMGg.png" // Add this line
   },
   // {
   //   date: "October 1st - 16th, 2024",
@@ -38,7 +39,7 @@ const hackathons: HackathonEntry[] = [
   // },
   {
     date: "October 1st - 31st, 2024",
-    name: "Appwrite’s Hacktoberfest",
+    name: "Appwrite's Hacktoberfest",
     location: "Online",
     description: "Built EventSphere, App for discovering nearby events like concerts and conferences, offering personalized recommendations, easy registration, and map-based navigation.",
     tags: [],
@@ -100,10 +101,12 @@ export default function HackathonsPage() {
               <div className="flex-shrink-0 mr-4">
                 <Avatar className="w-9 h-9 flex items-center justify-center overflow-hidden">
                   {hackathon.imageUrl ? (
-                    <img 
+                    <Image 
                       src={hackathon.imageUrl} 
                       alt={hackathon.name} 
-                      className="w-full h-full object-cover" 
+                      width={36}
+                      height={36}
+                      className="object-cover" 
                     />
                   ) : (
                     <span className="text-xl">{hackathon.name[0]}</span>
