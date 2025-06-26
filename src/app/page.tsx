@@ -35,6 +35,7 @@ interface ThoughtItem {
 
 
 const workItems: WorkItem[] = [
+
   { 
     company: "Delaplex", 
     role: "Software Developer Intern", 
@@ -60,6 +61,13 @@ const projectItems: ProjectItem[] = [
     link: "https://tourease.us/",
     image:"https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
   },
+  // {
+  //   name: "QuickWorker",
+  //   description: "An AI app providing personalized itineraries and real-time travel recommendations.",
+  //   link: "https://quickworker.in/",
+  //   image:""
+  // },
+
   {
     name: "Hometro",
     description: "Find the homes and rentals properies within your city on a exclusive deals ",
@@ -79,17 +87,12 @@ const projectItems: ProjectItem[] = [
     image:"https://i.pinimg.com/564x/6b/0a/3a/6b0a3a3e6d3009793e96e2b2e99475ac.jpg"
   },
   // {
-  //   name: "SnipAI",
-  //   description: "Building B2B AI-SaaS (Stealth Mode)",
-  //   link: "https://legalyai.co/",
-  //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
-  // },
-  // {
   //   name: "LearnifyAI",
   //   description: "Building B2B AI-SaaS (Stealth Mode)",
-  //   link: "https://legalyai.co/",
+  //   link: "https://learnifyai.co/",
   //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
   // },
+
   // {
   //   name: "SapioAI",
   //   description: "Building B2B AI-SaaS (Stealth Mode)",
@@ -320,7 +323,12 @@ export default function PortfolioLanding() {
     Get in Touch
   </Button>
 </a>
-<p className="text-[14px] text-center">Reach out if you want to chat, you can usually find me on X.</p>
+<p className="text-[14px] text-center">
+  My DMs are always open — <a href="https://x.com/messages/compose?recipient_id=1332622199786598403" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">reach out on X</a> anytime.
+</p>
+
+
+
           </div>
           
 

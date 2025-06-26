@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import AmitIcon from '@/assets/alog.ico'
 import { Inter } from 'next/font/google'
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -26,7 +27,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href={AmitIcon.src} sizes="any" type="image/x-icon" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        {children}
+        <Analytics />
+      </body>
     </html>
   )
 }
