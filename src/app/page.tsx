@@ -6,6 +6,7 @@ import { Moon, Sun, ChevronDown, ChevronUp } from "lucide-react"
 import { useRouter } from 'next/navigation'
 import { useDarkMode } from "@/lib/useDarkMode"
 import Image from 'next/image'
+import AmitImage from '@/assets/amitmasram.jpg'
 
 
 interface WorkItem {
@@ -19,26 +20,27 @@ interface ProjectItem {
   name: string;
   description: string;
   link: string;
-  image:string;
+  image: string;
 }
 
 interface WritingItem {
   title: string;
   description: string;
-  link: string;
+  link?: string;
+  onClick?: () => void;
 }
 // Define the Thoughts interface
 interface ThoughtItem {
   content: string;
-  date: string;
+  //  date: string;
 }
 
 
 const workItems: WorkItem[] = [
 
-  { 
-    company: "Delaplex", 
-    role: "Software Developer Intern", 
+  {
+    company: "Delaplex",
+    role: "Software Developer Intern",
     details: "Working on mobile app development team, specializing in Flutter and Firebase. Building cross-platform applications and implementing real-time features & services.",
     image: "https://s3-symbol-logo.tradingview.com/delaplex-ltd--600.png",
     link: "https://delaplex.com/"
@@ -48,9 +50,8 @@ const workItems: WorkItem[] = [
 
 // Sample thought items
 const thoughtItems: ThoughtItem[] = [
-  { content: "Create, iterate, and evolve.", date: "September 2024" },
-  { content: "whatever it takes to build it. just build it.", date: "December 2024" },
-  { content: "Make the right decision to do the right thing.", date: "December 2024" },
+  { content: " \"We're here for a limited time — in a multiverse of infinite, uncharted possibilities.\"  Let's talk." },
+
 ];
 
 const projectItems: ProjectItem[] = [
@@ -59,7 +60,7 @@ const projectItems: ProjectItem[] = [
     name: "Tourease",
     description: "An AI app providing personalized itineraries and real-time travel recommendations.",
     link: "https://tourease.us/",
-    image:"https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
+    image: "https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
   },
   // {
   //   name: "QuickWorker",
@@ -68,64 +69,26 @@ const projectItems: ProjectItem[] = [
   //   image:""
   // },
 
-  {
-    name: "Hometro",
-    description: "Find the homes and rentals properies within your city on a exclusive deals ",
-    link: "https://hometro.co/",
-    image:"https://www.imghost.net/ib/LxJZBOpht4Uqe4R_1730513430.jpg"
-  },
-  {
-    name: "Legaly",
-    description: "Building B2B AI-SaaS (Stealth Mode)",
-    link: "https://legalyai.co/",
-    image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
-  },
-  {
-    name: "SnipAI",
-    description: "The Messenger AI Agent - In progress...",
-    link: "https://trysnipai.co/",
-    image:"https://i.pinimg.com/564x/6b/0a/3a/6b0a3a3e6d3009793e96e2b2e99475ac.jpg"
-  },
   // {
-  //   name: "LearnifyAI",
+  //   name: "Hometro",
+  //   description: "Find the homes and rentals properies within your city on a exclusive deals ",
+  //   link: "https://hometro.co/",
+  //   image:"https://www.imghost.net/ib/LxJZBOpht4Uqe4R_1730513430.jpg"
+  // },
+  // {
+  //   name: "Legaly",
   //   description: "Building B2B AI-SaaS (Stealth Mode)",
-  //   link: "https://learnifyai.co/",
+  //   link: "https://legalyai.co/",
   //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
+  // },
+  // {
+  //   name: "SnipAI",
+  //   description: "The Messenger AI Agent - In progress...",
+  //   link: "https://trysnipai.co/",
+  //   image:"https://i.pinimg.com/564x/6b/0a/3a/6b0a3a3e6d3009793e96e2b2e99475ac.jpg"
   // },
 
-  // {
-  //   name: "SapioAI",
-  //   description: "Building B2B AI-SaaS (Stealth Mode)",
-  //   link: "https://legalyai.co/",
-  //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
-  // },
-  // {
-  //   name: "Altery",
-  //   description: "Building B2B AI-SaaS (Stealth Mode)",
-  //   link: "https://legalyai.co/",
-  //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
-  // },
-  // {
-  //   name: "MarketLaunch",
-  //   description: "Building B2B AI-SaaS (Stealth Mode)",
-  //   link: "https://legalyai.co/",
-  //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
-  // },
-  // {
-  //   name: "Legaly AI",
-  //   description: "Building B2B AI-SaaS (Stealth Mode)",
-  //   link: "https://legalyai.co/",
-  //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
-  // },
 ];
-
-const writingItems: WritingItem[] = [
-  { title: "Turning to Reality (In Progress)",
-    description: "Exploring my plans and aspirations.",
-    link: "#" },
-
-  { title: "-1 to 0 (In Progress)",
-     description: "In this journey, I'm validating various ideas and seeing how many will succeed.", link: "#" }];
 
 
 export default function PortfolioLanding() {
@@ -141,6 +104,9 @@ export default function PortfolioLanding() {
   const navigateToHackathons = () => {
     router.push('/hackathons')
   }
+  const navigateToZeroToOne = () => {
+    router.push('/zerotoone')
+  }
 
   const navigateToOpenSource = () => {
     router.push('/opensource')
@@ -149,11 +115,25 @@ export default function PortfolioLanding() {
     setExpandedItem(expandedItem === index ? null : index)
   }
 
+  // Define writing items with navigation functions
+  const writingItems: WritingItem[] = [
+    {
+      title: "Translating Animal Language: Science Fiction or Future Science? (In Progress)",
+      description: "Exploring my plans and aspirations.",
+      link: "#"
+    },
+    {
+      title: "-1 to 0",
+      description: "In this journey, I'm validating various ideas and seeing how many will succeed.",
+      onClick: navigateToZeroToOne
+    }
+  ];
+
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-black text-gray-200' : 'bg-white text-gray-700'} transition-colors duration-300`}>
       <div className="flex flex-col items-center justify-center p-4 min-h-screen">
 
-      <Button
+        <Button
           size="icon"
           className={`absolute top-4 right-4 md:top-8 md:right-8 ${isDarkMode ? 'text-gray-200' : 'text-gray-700'}`}
           onClick={toggleDarkMode}
@@ -162,31 +142,65 @@ export default function PortfolioLanding() {
           <span className="sr-only">Toggle theme</span>
         </Button>
 
-        {/* <Button
-          variant="outline"
-          size="icon"
-          className={`absolute top-4 right-4 md:top-8 md:right-8 ${isDarkMode ? 'text-gray-200 border-gray-200' : 'text-gray-700 border-gray-700'}`}
-          onClick={toggleDarkMode}
-        >
-          {isDarkMode ? <Sun className="h-[1.2rem] w-[1.2rem]" /> : <Moon className="h-[1.2rem] w-[1.2rem]" />}
-          <span className="sr-only">Toggle theme</span>
-        </Button> */}
+
 
         <main className="max-w-2xl w-full p-6">
-          <h1 className={`text-4xl md:text-6xl font-bold mb-6 text-center ${isDarkMode ? 'text-white' : 'text-black'}`}>Amit Masram</h1>
-          <p className="text-sm mb-8 text-center">
-            {/* <a href="mailto:amitmasram831@gmail.com" className="hover:underline">Email</a> | */}
-            <a href="https://x.com/amitxmasram" target="_blank" rel="noopener noreferrer" className="hover:underline"> X</a> |
-            <a href="https://www.linkedin.com/in/amitmasram/" target="_blank" rel="noopener noreferrer" className="hover:underline"> LinkedIn</a> |
-            <a href="https://github.com/amitmasram" target="_blank" rel="noopener noreferrer" className="hover:underline"> GitHub</a>
-          </p>
+
+          <div className="flex items-center gap-6 mb-6">
+            <div className="flex-shrink-0">
+              <Image
+                src={AmitImage}
+                alt="Amit Masram"
+                width={120}
+                height={120}
+                className="rounded-full object-cover"
+              />
+            </div>
+            <div>
+              <h1 className={`pt-4 pl-4 text-3xl md:text-5xl font-bold ${isDarkMode ? 'text-white' : 'text-black'}`}>
+                Amit Masram
+              </h1>
+              {/* Social links */}
+              <div className="text-sm mb-8 text-center pt-4">
+                <a
+                  href="https://x.com/amitxmasram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline text-blue-600"
+                >
+                  X
+                </a>
+                <span className="text-gray-400 mx-1">|</span>
+                <a
+                  href="https://www.linkedin.com/in/amitmasram/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline text-blue-600"
+                >
+                  LinkedIn
+                </a>
+                <span className="text-gray-400 mx-1">|</span>
+                <a
+                  href="https://github.com/amitmasram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline text-blue-600"
+                >
+                  GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+
 
           <div className="mb-12 space-y-4 text-left">
             <p className="text-m">
-              I&apos;m currently building <a href="https://tourease.us/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Tourease</a> app, an AI-powered personalized tour guide for your travels,
+              I try to put my work out into the world in a way that contributes to others and helps make things better.
             </p>
+
             <p className="text-m">
-              I enjoy learning to be a better engineer and thinker, developing the foundation to build things and understand the world.
+              Learning to become a better engineer and thinker excites me, developing the foundation to build things and understand the world.
               I specialize in building full-stack apps.
               {/* I like to do <span onClick={navigateToHackathons} className="text-blue-600 hover:underline cursor-pointer">Hackathons</span> &nbsp;&
               <span onClick={navigateToOpenSource} className="text-blue-600 hover:underline cursor-pointer"> OpenSource</span> */}
@@ -200,24 +214,7 @@ export default function PortfolioLanding() {
             </p> */}
           </div>
 
-          {/* <div className="flex justify-center gap-4 mb-12">
-            <Button
-              variant="outline"
-              className={`${isDarkMode ? 'text-gray-200 border-gray-200 hover:bg-gray-900' : 'text-gray-700 border-gray-700 hover:bg-gray-100'}`}
-            >
-              Hackathons
-            </Button>
-            <a href="mailto:amitmasram831@gmail.com">
-  <Button
-    className={`${isDarkMode ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-900 text-white hover:bg-gray-700'}`}
-  >
-    Get in Touch
-  </Button>
-</a>
-
-          </div> */}
-
-          <div className="mb-12">
+          {/* <div className="mb-12">
             <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Work</h2>
             {workItems.map((item, index) => (
               <div key={index} className="mb-4">
@@ -252,64 +249,67 @@ export default function PortfolioLanding() {
                 )}
               </div>
             ))}
-          </div>
-
-          <div className="mb-12">
-  <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
-  {projectItems.map((item, index) => (
-    <div key={index} className="mb-4 flex items-start gap-4">
-      <Image
-        src={item.image || "https://via.placeholder.com/60"}
-        alt={item.name}
-        width={28}
-        height={28}
-        className="object-cover rounded-md"
-      />
-      <div>
-        <a href={item.link} className="block hover:underline">
-          <h3 className="text-[15px] font-semibold">{item.name}</h3>
-          <p className="text-sm text-gray-500">{item.description}</p>
-        </a>
-      </div>
-    </div>
-  ))}
-</div>
-
-          {/* <div className="mb-12">
-            <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
-            {projectItems.map((item, index) => (
-              <div key={index} className="mb-4">
-                <a href={item.link} className="block hover:underline">
-                <h3 className="text-[15px] font-semibold">{item.name}</h3>
-                  <p className="text-sm text-gray-500">{item.description}</p>
-                </a>
-              </div>
-            ))}
           </div> */}
 
           <div className="mb-12">
-            <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Writings</h2>
+            <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
+            {projectItems.map((item, index) => (
+              <div key={index} className="mb-4 flex items-start gap-4">
+                <Image
+                  src={item.image || "https://via.placeholder.com/60"}
+                  alt={item.name}
+                  width={28}
+                  height={28}
+                  className="object-cover rounded-md"
+                />
+                <div>
+                  <a href={item.link} className="block hover:underline">
+                    <h3 className="text-[15px] font-semibold">{item.name}</h3>
+                    <p className="text-sm text-gray-500">{item.description}</p>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+
+
+
+          <div className="mb-12">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className={`text-base font-bold ${isDarkMode ? 'text-white' : 'text-black'}`}>Writings</h2>
+              <a href="#" className="text-blue-500 text-xs font-medium hover:underline">View all</a>
+            </div>
             {writingItems.map((item, index) => (
               <div key={index} className="mb-4">
-                <a href={item.link} className="block hover:underline">
-                <h3 className="text-[15px] font-semibold">{item.title}</h3>
-                  <p className="text-sm text-gray-500">{item.description}</p>
-                </a>
+                {item.onClick ? (
+                  <div onClick={item.onClick} className="block hover:underline cursor-pointer">
+                    <h3 className="text-[15px] font-semibold">{item.title}</h3>
+                    <p className="text-sm text-gray-500">{item.description}</p>
+                  </div>
+                ) : (
+                  <a href={item.link} className="block hover:underline">
+                    <h3 className="text-[15px] font-semibold">{item.title}</h3>
+                    <p className="text-sm text-gray-500">{item.description}</p>
+                  </a>
+                )}
               </div>
             ))}
           </div>
           <div className="mb-12">
-            <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Thoughts</h2>
+            <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Inner Code</h2>
             {thoughtItems.map((item, index) => (
               <div key={index} className="mb-4">
-                <p className="text-[14px]">{item.content}</p>
-                <p className="text-[12px] text-gray-500">{item.date}</p>
+
+                <p className="text-base italic font-thin" style={{ fontFamily: 'Georgia, serif' }}>{item.content}</p>
+
+
+
               </div>
             ))}
           </div>
           <div className="flex flex-col items-center gap-4 mb-8">
-          {/* <div className="flex justify-center gap-4 mb-12"> */}
-          {/* <Button 
+            {/* <div className="flex justify-center gap-4 mb-12"> */}
+            {/* <Button 
               variant="outline" 
               className={`${isDarkMode ? 'text-gray-200 border-gray-200 hover:bg-gray-900' : 'text-gray-700 border-gray-700 hover:bg-gray-100'}`}
               onClick={navigateToHackathons}
@@ -317,20 +317,20 @@ export default function PortfolioLanding() {
               Hackathons
             </Button> */}
             <a href="mailto:amitxmasram@gmail.com">
-            <Button
-    className={`${isDarkMode ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-900 text-white hover:bg-gray-700'}`}
-  >
-    Get in Touch
-  </Button>
-</a>
-<p className="text-[14px] text-center">
-  My DMs are always open — <a href="https://x.com/messages/compose?recipient_id=1332622199786598403" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">reach out on X</a> anytime.
-</p>
+              <Button
+                className={`${isDarkMode ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-900 text-white hover:bg-gray-700'}`}
+              >
+                Get in Touch
+              </Button>
+            </a>
+            <p className="text-[14px] text-center">
+              My DMs are always open — <a href="https://x.com/messages/compose?recipient_id=1332622199786598403" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">reach out on X</a> anytime.
+            </p>
 
 
 
           </div>
-          
+
 
         </main>
 
@@ -344,5 +344,3 @@ export default function PortfolioLanding() {
     </div>
   )
 }
-
-
