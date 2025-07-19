@@ -62,31 +62,39 @@ const projectItems: ProjectItem[] = [
     link: "https://tourease.us/",
     image: "https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
   },
-  // {
-  //   name: "QuickWorker",
-  //   description: "An AI app providing personalized itineraries and real-time travel recommendations.",
-  //   link: "https://quickworker.in/",
-  //   image:""
-  // },
+  {
+    name: "Fluentype",
+    description: "Helps users to improve typing speed while learning English — built from a simple idea to support a friend.",
+    link: "https://fluentype.xyz/",
+    image: "https://i.pinimg.com/1200x/c4/35/6c/c4356cd5454d06585e0a46066b555172.jpg"
+  },
+  
+  {
+    name: "QuickWorker",
+    description: "Connects you with local workers like electricians, plumbers, and more — fast and hassle-free.",
+    link: "https://quickworker.xyz/",
+    image: "https://www.imghost.net/ib/Zp9cYpuKSjXvegc_1752441869.png"
+  },
+  
 
-  // {
-  //   name: "Hometro",
-  //   description: "Find the homes and rentals properies within your city on a exclusive deals ",
-  //   link: "https://hometro.co/",
-  //   image:"https://www.imghost.net/ib/LxJZBOpht4Uqe4R_1730513430.jpg"
-  // },
-  // {
-  //   name: "Legaly",
-  //   description: "Building B2B AI-SaaS (Stealth Mode)",
-  //   link: "https://legalyai.co/",
-  //   image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
-  // },
-  // {
-  //   name: "SnipAI",
-  //   description: "The Messenger AI Agent - In progress...",
-  //   link: "https://trysnipai.co/",
-  //   image:"https://i.pinimg.com/564x/6b/0a/3a/6b0a3a3e6d3009793e96e2b2e99475ac.jpg"
-  // },
+  {
+    name: "Hometro",
+    description: "Find the homes and rentals properies within your city on a exclusive deals ",
+    link: "https://hometro.co/",
+    image:"https://www.imghost.net/ib/LxJZBOpht4Uqe4R_1730513430.jpg"
+  },
+  {
+    name: "Legaly",
+    description: "Building B2B AI-SaaS (Stealth Mode)",
+    link: "https://legalyai.co/",
+    image:"https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
+  },
+  {
+    name: "SnipAI",
+    description: "The Messenger AI Agent - In progress...",
+    link: "https://trysnipai.co/",
+    image:"https://i.pinimg.com/564x/6b/0a/3a/6b0a3a3e6d3009793e96e2b2e99475ac.jpg"
+  },
 
 ];
 
@@ -214,42 +222,7 @@ export default function PortfolioLanding() {
             </p> */}
           </div>
 
-          {/* <div className="mb-12">
-            <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Work</h2>
-            {workItems.map((item, index) => (
-              <div key={index} className="mb-4">
-                <div
-                  className="flex justify-between items-center cursor-pointer"
-                  onClick={() => toggleExpand(index)}
-                >
-                  <div className="flex items-center gap-4">
-                    {item.image && (
-                      <Image
-                        src={item.image}
-                        alt={item.company}
-                        width={28}
-                        height={28}
-                        className="object-cover rounded-md"
-                      />
-                    )}
-                    <div>
-                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                        <h3 className="text-[15px] font-semibold">{item.company}</h3>
-                      </a>
-                      <p className="text-sm">{item.role}</p>
-                    </div>
-                  </div>
-                  {expandedItem === index ?
-                    <ChevronUp className="h-5 w-5" /> :
-                    <ChevronDown className="h-5 w-5" />
-                  }
-                </div>
-                {expandedItem === index && (
-                  <p className="mt-2 text-sm text-gray-500">{item.details}</p>
-                )}
-              </div>
-            ))}
-          </div> */}
+   
 
           <div className="mb-12">
             <h2 className={`text-base font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
@@ -308,14 +281,7 @@ export default function PortfolioLanding() {
             ))}
           </div>
           <div className="flex flex-col items-center gap-4 mb-8">
-            {/* <div className="flex justify-center gap-4 mb-12"> */}
-            {/* <Button 
-              variant="outline" 
-              className={`${isDarkMode ? 'text-gray-200 border-gray-200 hover:bg-gray-900' : 'text-gray-700 border-gray-700 hover:bg-gray-100'}`}
-              onClick={navigateToHackathons}
-            >
-              Hackathons
-            </Button> */}
+          
             <a href="mailto:amitxmasram@gmail.com">
               <Button
                 className={`${isDarkMode ? 'bg-gray-200 text-black hover:bg-gray-300' : 'bg-gray-900 text-white hover:bg-gray-700'}`}
