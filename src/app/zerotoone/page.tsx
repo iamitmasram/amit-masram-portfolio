@@ -48,6 +48,11 @@ export default function ZeroToOnePage() {
           </p>
         </div>
 
+
+
+
+        {/* Add image here */}
+
         {/* Main Content */}
         <div className="space-y-8">
 
@@ -57,10 +62,10 @@ export default function ZeroToOnePage() {
 
           <div className="space-y-4">
   <div className="flex items-start gap-3">
-    <span className={`${isDarkMode ? 'text-blue-400' : 'text-blue-600'} font-bold`}>•</span>
+    <span className={`${isDarkMode ? 'text-blue-400' : 'text-blue-600'} font-bold`}>⁕</span>
     <div>
       <p className={`${isDarkMode ? 'text-gray-200' : 'text-gray-800'} font-semibold`}>Tourease</p>
-      <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} text-sm leading-relaxed`}>
+      <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-600'} text-white-600 leading-relaxed`}>
         My first attempt at building a real-world product. Designed for travelers and explorers, <strong>Tourease</strong> was an AI-powered app that generated trip plans based on the user&apos;s chosen destination—without the hassle of traditional itinerary planning.
         It was a college project developed by a team of four, which we pitched to faculty members. While it didn&apos;t gain much traction, the experience taught us a lot about teamwork, product thinking, and building under constraints.
         Eventually, we decided to discontinue it, but it marked the start of my journey from zero.

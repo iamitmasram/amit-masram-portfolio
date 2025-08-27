@@ -68,7 +68,7 @@ export default function HackathonsPage() {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-black text-gray-200' : 'bg-white text-gray-700'} transition-colors duration-300 p-8`}>
       <div className="max-w-2xl mx-auto">
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex justify-between items-center mb-5">
           <h1 className={`text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-black'}`}>Hackathons</h1>
           
           {/* <Button
@@ -81,9 +81,10 @@ export default function HackathonsPage() {
             <span className="sr-only">Toggle theme</span>
           </Button> */}
         </div>
-        <p className="text-white-600 mb-8">
+        <p className="text-[1.037rem] mb-5 ${isDarkMode ? 'text-gray-200' : 'text-gray-800">
         I like to participating in global hackathons, primarily online, where I collaborate with individuals and diverse teams to solve challenges and build projects.
       </p>
+      <hr className="w-full border-t border-gray-300 my-2" />
         
         {/* <div className="mb-8">
           <Button 
@@ -135,7 +136,7 @@ export default function HackathonsPage() {
                 <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{hackathon.date}</p>
                 <h2 className={`text-sm font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>{hackathon.name}</h2>
                 <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{hackathon.location}</p>
-                <p className={`mt-2 text-sm ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{hackathon.description}</p>
+                <p className={`text-white-600 mb-5 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{hackathon.description}</p>
                 <div className="mt-2 flex items-center space-x-2">
                   {hackathon.tags.map((tag, tagIndex) => (
                     <Badge key={tagIndex} variant="secondary">{tag}</Badge>
@@ -157,3 +158,5 @@ export default function HackathonsPage() {
     </div>
   )
 }
+
+

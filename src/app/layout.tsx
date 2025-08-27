@@ -15,9 +15,7 @@ export const metadata: Metadata = {
   icons: {
     icon: AmitIcon.src, // Use the AmitIcon as the favicon
   },
-};
-
-export default function RootLayout({
+};export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
@@ -27,7 +25,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href={AmitIcon.src} sizes="any" type="image/x-icon" />
       </head>
-      <body className={inter.className}>
+      <body>
         {children}
         <Analytics />
       </body>
