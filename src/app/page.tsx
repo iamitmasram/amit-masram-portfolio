@@ -6,7 +6,7 @@ import { Moon, Sun, ChevronDown, ChevronUp } from "lucide-react"
 import { useRouter } from 'next/navigation'
 import { useDarkMode } from "@/lib/useDarkMode"
 import Image from 'next/image'
-import AmitImage from '@/assets/amitmasram.jpg'
+import AmitImage from '@/assets/amitmasram2.png'
 
 
 interface WorkItem {
@@ -81,11 +81,11 @@ const projectItems: ProjectItem[] = [
     name: "Hometro",
     description: "Find the homes and rentals properies within your city on a exclusive deals ",
     link: "https://hometro.co/",
-    image: "https://www.imghost.net/ib/LxJZBOpht4Uqe4R_1730513430.jpg"
+    image: ""
   },
   {
     name: "Legaly",
-    description: "Building B2B AI-SaaS (Stealth Mode)",
+    description: "Analyze and verify any document, paper, or agreement using AI.",
     link: "https://legalyai.co/",
     image: "https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
   },
@@ -95,6 +95,25 @@ const projectItems: ProjectItem[] = [
     link: "https://trysnipai.co/",
     image: "https://i.pinimg.com/564x/6b/0a/3a/6b0a3a3e6d3009793e96e2b2e99475ac.jpg"
   },
+  {
+    name: "MarketLaunch",
+    description: "A Product Hunt-inspired platform to launch brands, software, and products online.",
+    link: "https://marketlaunch.biz/",
+    image: "https://i.pinimg.com/736x/50/29/69/5029694bfb2ceca6026b036a4769b71f.jpg"
+  },
+  {
+    name: "Proptrader",
+    description: "Curious to building a trading platform for real estate. (In Progress...)",
+    link: "https://proptrader.co/",
+    image: "https://i.pinimg.com/1200x/c4/35/6c/c4356cd5454d06585e0a46066b555172.jpg"
+  },
+  {
+    name: "SapioAI",
+    description: "In Progress...",
+    link: "https://sapioai.co/",
+    image: "https://i.pinimg.com/1200x/c4/35/6c/c4356cd5454d06585e0a46066b555172.jpg"
+  },
+
 
 ];
 
