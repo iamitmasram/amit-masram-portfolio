@@ -97,7 +97,7 @@ export default function OpenSourcePage() {
                     <Button variant="outline" size="xs" asChild>
                       <a href={hackathon.sourceUrl} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h- w-4" />
-                        Source
+                        Source Code
                       </a>
                     </Button>
                   )}

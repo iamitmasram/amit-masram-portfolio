@@ -164,8 +164,6 @@ export default function PortfolioLanding() {
           <span className="sr-only">Toggle theme</span>
         </Button>
 
-
-
         <main className="max-w-2xl w-full p-6">
 
           <div className="flex items-center gap-6 mb-6">
@@ -185,6 +183,16 @@ export default function PortfolioLanding() {
               >
                 Amit Masram
               </h1>
+              {/* Location with minimal globe icon */}
+              <div className="flex items-center text-xs text-gray-500 mb-1">
+                {/* Minimal Globe Icon */}
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.2">
+                  <circle cx="10" cy="10" r="8" stroke="currentColor" fill="none"/>
+                  <ellipse cx="10" cy="10" rx="3.5" ry="8" stroke="currentColor" fill="none"/>
+                  <line x1="2" y1="10" x2="18" y2="10" stroke="currentColor"/>
+                </svg>
+                <span>Tech Valley, Mars</span>
+              </div>
               {/* Social links */}
               <div className="text-sm mt-0 flex items-center">
                 <a
