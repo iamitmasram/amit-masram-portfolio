@@ -6,7 +6,7 @@ import { Moon, Sun, ChevronDown, ChevronUp } from "lucide-react"
 import { useRouter } from 'next/navigation'
 import { useDarkMode } from "@/lib/useDarkMode"
 import Image from 'next/image'
-import AmitImage from '@/assets/amitmasram2.png'
+import AmitImage from '@/assets/amitmasram3.png'
 
 
 interface WorkItem {
