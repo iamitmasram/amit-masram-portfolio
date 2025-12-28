@@ -36,10 +36,6 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'www.imghost.net',
-      },
-      {
-        protocol: 'https',
         hostname: 'cdn4.vectorstock.com',
       },
       {
@@ -49,6 +45,18 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'via.placeholder.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'instagram.fnag1-2.fna.fbcdn.net',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.fbcdn.net',
       }
     ],
   },

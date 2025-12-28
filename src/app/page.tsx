@@ -6,7 +6,7 @@ import { Moon, Sun, ChevronDown, ChevronUp } from "lucide-react"
 import { useRouter } from 'next/navigation'
 import { useDarkMode } from "@/lib/useDarkMode"
 import Image from 'next/image'
-import AmitImage from '@/assets/amitmasram3.png'
+import AmitImage from '@/assets/amitmasram.png'
 
 
 interface WorkItem {
@@ -59,7 +59,7 @@ const projectItems: ProjectItem[] = [
   {
     name: "Tourease",
     description: "An AI app providing personalized itineraries and real-time travel recommendations.",
-    link: "https://tourease.us/",
+    link: "https://tourease.netlify.app/",
     image: "https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
   },
   {
@@ -72,33 +72,33 @@ const projectItems: ProjectItem[] = [
   {
     name: "QuickWorker",
     description: "Connects you with local workers like electricians, plumbers, and more — fast and hassle-free.",
-    link: "https://quickworker.xyz/",
-    image: "https://www.imghost.net/ib/Zp9cYpuKSjXvegc_1752441869.png"
+    link: "https://github.com/amitmasram/QuickWorker",
+    image: "https://i.pinimg.com/1200x/c4/35/6c/c4356cd5454d06585e0a46066b555172.jpg"
   },
 
 
   {
     name: "Hometro",
     description: "Find the homes and rentals properies within your city on a exclusive deals ",
-    link: "https://hometro.co/",
-    image: ""
+    link: "https://hometro.vercel.app/",
+    image: "https://instagram.fnag1-2.fna.fbcdn.net/v/t51.2885-19/601498931_17898965889355074_397475704889087774_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fnag1-2.fna.fbcdn.net&_nc_cat=106&_nc_oc=Q6cZ2QFggeEgIe05IRup7006fsyrJ-_rD0Y-M7ChgO9xEcBUSF-AwMUkwO2_YNbAZnrZSqzt8gpTAMSHD0jY5OiupMbz&_nc_ohc=FpFKpfnjEm0Q7kNvwHH4V7S&_nc_gid=IGujkcPvSz6YphP39W2I8Q&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AfmFGPcXsCbsnVtJJAxCu748tXLmI3NhtYmF6oBII-9jzA&oe=694E3607&_nc_sid=7d3ac5"
   },
   {
     name: "Legaly",
     description: "Analyze and verify any document, paper, or agreement using AI.",
-    link: "https://legalyai.co/",
+    link: "https://legalyai.vercel.app/",
     image: "https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
   },
   {
     name: "SnipAI",
     description: "The Messenger AI Agent - In progress...",
-    link: "https://trysnipai.co/",
+    link: "https://trysnipai.vercel.app/",
     image: "https://i.pinimg.com/564x/6b/0a/3a/6b0a3a3e6d3009793e96e2b2e99475ac.jpg"
   },
   {
     name: "MarketLaunch",
     description: "A Product Hunt-inspired platform to launch brands, software, and products online.",
-    link: "https://marketlaunch.biz/",
+    link: "https://openlaunch.lovable.app",
     image: "https://i.pinimg.com/736x/50/29/69/5029694bfb2ceca6026b036a4769b71f.jpg"
   },
   {
@@ -107,12 +107,7 @@ const projectItems: ProjectItem[] = [
     link: "https://proptrader.co/",
     image: "https://i.pinimg.com/1200x/c4/35/6c/c4356cd5454d06585e0a46066b555172.jpg"
   },
-  {
-    name: "SapioAI",
-    description: "In Progress...",
-    link: "https://sapioai.co/",
-    image: "https://i.pinimg.com/1200x/c4/35/6c/c4356cd5454d06585e0a46066b555172.jpg"
-  },
+
 
 
 ];
@@ -126,8 +121,8 @@ export default function PortfolioLanding() {
   const navigateToHackathons = () => {
     router.push('/hackathons')
   }
-  const navigateToZeroToOne = () => {
-    router.push('/zerotoone')
+  const navigateToEvolutionOfInformation = () => {
+    router.push('/evolution')
   }
 
   const navigateToOpenSource = () => {
@@ -145,9 +140,9 @@ export default function PortfolioLanding() {
       link: "#"
     },
     {
-      title: "-1 to 0",
-      description: "In this journey, I'm validating various ideas and seeing how many will succeed.",
-      onClick: navigateToZeroToOne
+      title: "How Humans Have Stored Information: From Stone Marks to the Internet Age",
+      description: "A brief history of humanity's journey in storing and sharing information.",
+      onClick: navigateToEvolutionOfInformation
     }
   ];
 
@@ -167,7 +162,7 @@ export default function PortfolioLanding() {
         <main className="max-w-2xl w-full p-6">
 
           <div className="flex items-center gap-6 mb-6">
-            <div className="flex-shrink-0 flex items-start pt-1">
+            <div className="flex-shrink-0 flex items-start pt-8">
               <Image
                 src={AmitImage}
                 alt="Amit Masram"
@@ -187,9 +182,9 @@ export default function PortfolioLanding() {
               <div className="flex items-center text-xs text-gray-500 mb-1">
                 {/* Minimal Globe Icon */}
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.2">
-                  <circle cx="10" cy="10" r="8" stroke="currentColor" fill="none"/>
-                  <ellipse cx="10" cy="10" rx="3.5" ry="8" stroke="currentColor" fill="none"/>
-                  <line x1="2" y1="10" x2="18" y2="10" stroke="currentColor"/>
+                  <circle cx="10" cy="10" r="8" stroke="currentColor" fill="none" />
+                  <ellipse cx="10" cy="10" rx="3.5" ry="8" stroke="currentColor" fill="none" />
+                  <line x1="2" y1="10" x2="18" y2="10" stroke="currentColor" />
                 </svg>
                 <span>Tech Valley, Mars</span>
               </div>
@@ -251,8 +246,8 @@ export default function PortfolioLanding() {
                   <Image
                     src={item.image || "https://via.placeholder.com/60"}
                     alt={item.name}
-                    width={28}
-                    height={28}
+                    width={30}
+                    height={30}
                     className="object-cover rounded-md"
                   />
                   <div className="flex-1">
