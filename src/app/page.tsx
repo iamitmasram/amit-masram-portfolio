@@ -141,7 +141,7 @@ export default function PortfolioLanding() {
     },
     {
       title: "How Humans Have Stored Information: From Stone Marks to the Internet Age",
-      description: "A brief history of humanity's journey in storing and sharing information.",
+      description: "A history of humanity's journey in storing and sharing information.",
       onClick: navigateToEvolutionOfInformation
     }
   ];
