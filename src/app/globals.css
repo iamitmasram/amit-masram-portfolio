@@ -50,20 +50,18 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Enhanced smooth scrolling - handled by JavaScript */
+/* Enhanced smooth scrolling */
+* {
+  scroll-behavior: smooth;
+}
+
 /* Optimize scroll performance */
 html {
   scroll-padding-top: 1rem;
 }
 
 /* Smooth scroll for all scrollable containers */
-body, main {
+body, main, div {
+  scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
-}
-
-/* Prevent default scroll behavior on body */
-body {
-  overflow-y: auto;
-  scroll-behavior: auto;
 }

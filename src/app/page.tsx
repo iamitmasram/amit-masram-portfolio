@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useRef } from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Moon, Sun, ChevronDown, ChevronUp } from "lucide-react"
 import { useRouter } from 'next/navigation'
@@ -117,133 +117,6 @@ export default function PortfolioLanding() {
   const [expandedItem, setExpandedItem] = useState<number | null>(null)
   const router = useRouter()
   const { isDarkMode, toggleDarkMode } = useDarkMode()
-  const scrollContainerRef = useRef<HTMLDivElement>(null)
-
-  // Smooth scroll implementation
-  useEffect(() => {
-    let isScrolling = false
-    let scrollTarget = 0
-    let currentScroll = 0
-    let rafId: number | null = null
-
-    const easeInOutCubic = (t: number): number => {
-      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
-    }
-
-    const smoothScroll = () => {
-      if (!isScrolling) return
-
-      const diff = scrollTarget - currentScroll
-      if (Math.abs(diff) < 0.1) {
-        window.scrollTo(0, scrollTarget)
-        currentScroll = scrollTarget
-        isScrolling = false
-        if (rafId) {
-          cancelAnimationFrame(rafId)
-          rafId = null
-        }
-        return
-      }
-
-      // Very smooth easing - using a more gradual approach
-      currentScroll += diff * 0.08 // Lower value = smoother, more gradual scroll
-      window.scrollTo(0, currentScroll)
-      rafId = requestAnimationFrame(smoothScroll)
-    }
-
-    const handleWheel = (e: WheelEvent) => {
-      e.preventDefault()
-      
-      const delta = e.deltaY
-      const scrollAmount = delta * 0.4 // Reduced scroll speed for ultra-smooth feel
-      
-      scrollTarget = Math.max(0, Math.min(
-        document.documentElement.scrollHeight - window.innerHeight,
-        (scrollTarget || window.scrollY) + scrollAmount
-      ))
-
-      if (!isScrolling) {
-        currentScroll = window.scrollY
-        isScrolling = true
-        smoothScroll()
-      }
-    }
-
-    // Handle touch scrolling for mobile
-    let touchStartY = 0
-    let touchCurrentY = 0
-    let isTouching = false
-
-    const handleTouchStart = (e: TouchEvent) => {
-      touchStartY = e.touches[0].clientY
-      isTouching = true
-    }
-
-    const handleTouchMove = (e: TouchEvent) => {
-      if (!isTouching) return
-      touchCurrentY = e.touches[0].clientY
-      const delta = touchStartY - touchCurrentY
-      
-      scrollTarget = Math.max(0, Math.min(
-        document.documentElement.scrollHeight - window.innerHeight,
-        (scrollTarget || window.scrollY) + delta * 0.8
-      ))
-
-      if (!isScrolling) {
-        currentScroll = window.scrollY
-        isScrolling = true
-        smoothScroll()
-      }
-    }
-
-    const handleTouchEnd = () => {
-      isTouching = false
-    }
-
-    // Add event listeners
-    window.addEventListener('wheel', handleWheel, { passive: false })
-    window.addEventListener('touchstart', handleTouchStart, { passive: true })
-    window.addEventListener('touchmove', handleTouchMove, { passive: true })
-    window.addEventListener('touchend', handleTouchEnd, { passive: true })
-
-    // Handle keyboard scrolling
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(e.key)) {
-        e.preventDefault()
-        const scrollStep = e.key === 'ArrowDown' ? 100 : 
-                          e.key === 'ArrowUp' ? -100 :
-                          e.key === 'PageDown' ? window.innerHeight * 0.8 :
-                          e.key === 'PageUp' ? -window.innerHeight * 0.8 :
-                          e.key === 'Home' ? -Infinity :
-                          e.key === 'End' ? Infinity :
-                          e.key === ' ' ? 100 : 0
-
-        scrollTarget = Math.max(0, Math.min(
-          document.documentElement.scrollHeight - window.innerHeight,
-          (scrollTarget || window.scrollY) + scrollStep
-        ))
-
-        if (!isScrolling) {
-          currentScroll = window.scrollY
-          isScrolling = true
-          smoothScroll()
-        }
-      }
-    }
-
-    window.addEventListener('keydown', handleKeyDown)
-
-    return () => {
-      window.removeEventListener('wheel', handleWheel)
-      window.removeEventListener('touchstart', handleTouchStart)
-      window.removeEventListener('touchmove', handleTouchMove)
-      window.removeEventListener('touchend', handleTouchEnd)
-      window.removeEventListener('keydown', handleKeyDown)
-      if (rafId) {
-        cancelAnimationFrame(rafId)
-      }
-    }
-  }, [])
 
   const navigateToHackathons = () => {
     router.push('/hackathons')
@@ -274,7 +147,7 @@ export default function PortfolioLanding() {
   ];
 
   return (
-    <div ref={scrollContainerRef} className={`min-h-screen ${isDarkMode ? 'bg-black text-gray-200' : 'bg-white text-gray-700'} transition-colors duration-300`}>
+    <div className={`min-h-screen ${isDarkMode ? 'bg-black text-gray-200' : 'bg-white text-gray-700'} transition-colors duration-300`}>
       <div className="flex flex-col items-center justify-center p-4 min-h-screen">
 
         <Button
