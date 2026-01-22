@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 /* Force exact Calvin Chen style */
+html {
+  scroll-behavior: auto; /* Let JavaScript handle smooth scrolling */
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -12,6 +18,10 @@ html, body {
   line-height: 1.4;
   color: #000;
   background: #fff;
+  scroll-behavior: auto; /* Let JavaScript handle smooth scrolling */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: smooth;
+  overflow-x: hidden;
 }
 
 /* Headings (use browser default sizes) */
@@ -38,4 +48,22 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+
+/* Enhanced smooth scrolling - handled by JavaScript */
+/* Optimize scroll performance */
+html {
+  scroll-padding-top: 1rem;
+}
+
+/* Smooth scroll for all scrollable containers */
+body, main {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
+}
+
+/* Prevent default scroll behavior on body */
+body {
+  overflow-y: auto;
+  scroll-behavior: auto;
 }

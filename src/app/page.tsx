@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Moon, Sun, ChevronDown, ChevronUp } from "lucide-react"
 import { useRouter } from 'next/navigation'
@@ -50,7 +50,7 @@ const workItems: WorkItem[] = [
 
 // Sample thought items
 const thoughtItems: ThoughtItem[] = [
-  { content: " \"We're here for a limited time — in a multiverse of infinite, uncharted possibilities.\"  Let's talk!" },
+  { content: " \"We're here for a limited time, but the possibilities are endless.\" -- Let's talk!" },
 
 ];
 
@@ -80,7 +80,7 @@ const projectItems: ProjectItem[] = [
   {
     name: "Hometro",
     description: "Find the homes and rentals properies within your city on a exclusive deals ",
-    link: "https://hometro.vercel.app/",
+    link: "https://hometro.in/",
     image: "https://instagram.fnag1-2.fna.fbcdn.net/v/t51.2885-19/601498931_17898965889355074_397475704889087774_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fnag1-2.fna.fbcdn.net&_nc_cat=106&_nc_oc=Q6cZ2QFggeEgIe05IRup7006fsyrJ-_rD0Y-M7ChgO9xEcBUSF-AwMUkwO2_YNbAZnrZSqzt8gpTAMSHD0jY5OiupMbz&_nc_ohc=FpFKpfnjEm0Q7kNvwHH4V7S&_nc_gid=IGujkcPvSz6YphP39W2I8Q&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AfmFGPcXsCbsnVtJJAxCu748tXLmI3NhtYmF6oBII-9jzA&oe=694E3607&_nc_sid=7d3ac5"
   },
   {
@@ -96,7 +96,7 @@ const projectItems: ProjectItem[] = [
     image: "https://i.pinimg.com/564x/6b/0a/3a/6b0a3a3e6d3009793e96e2b2e99475ac.jpg"
   },
   {
-    name: "MarketLaunch",
+    name: "OpenLaunch",
     description: "A Product Hunt-inspired platform to launch brands, software, and products online.",
     link: "https://openlaunch.lovable.app",
     image: "https://i.pinimg.com/736x/50/29/69/5029694bfb2ceca6026b036a4769b71f.jpg"
@@ -117,6 +117,133 @@ export default function PortfolioLanding() {
   const [expandedItem, setExpandedItem] = useState<number | null>(null)
   const router = useRouter()
   const { isDarkMode, toggleDarkMode } = useDarkMode()
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+
+  // Smooth scroll implementation
+  useEffect(() => {
+    let isScrolling = false
+    let scrollTarget = 0
+    let currentScroll = 0
+    let rafId: number | null = null
+
+    const easeInOutCubic = (t: number): number => {
+      return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+    }
+
+    const smoothScroll = () => {
+      if (!isScrolling) return
+
+      const diff = scrollTarget - currentScroll
+      if (Math.abs(diff) < 0.1) {
+        window.scrollTo(0, scrollTarget)
+        currentScroll = scrollTarget
+        isScrolling = false
+        if (rafId) {
+          cancelAnimationFrame(rafId)
+          rafId = null
+        }
+        return
+      }
+
+      // Very smooth easing - using a more gradual approach
+      currentScroll += diff * 0.08 // Lower value = smoother, more gradual scroll
+      window.scrollTo(0, currentScroll)
+      rafId = requestAnimationFrame(smoothScroll)
+    }
+
+    const handleWheel = (e: WheelEvent) => {
+      e.preventDefault()
+      
+      const delta = e.deltaY
+      const scrollAmount = delta * 0.4 // Reduced scroll speed for ultra-smooth feel
+      
+      scrollTarget = Math.max(0, Math.min(
+        document.documentElement.scrollHeight - window.innerHeight,
+        (scrollTarget || window.scrollY) + scrollAmount
+      ))
+
+      if (!isScrolling) {
+        currentScroll = window.scrollY
+        isScrolling = true
+        smoothScroll()
+      }
+    }
+
+    // Handle touch scrolling for mobile
+    let touchStartY = 0
+    let touchCurrentY = 0
+    let isTouching = false
+
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartY = e.touches[0].clientY
+      isTouching = true
+    }
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (!isTouching) return
+      touchCurrentY = e.touches[0].clientY
+      const delta = touchStartY - touchCurrentY
+      
+      scrollTarget = Math.max(0, Math.min(
+        document.documentElement.scrollHeight - window.innerHeight,
+        (scrollTarget || window.scrollY) + delta * 0.8
+      ))
+
+      if (!isScrolling) {
+        currentScroll = window.scrollY
+        isScrolling = true
+        smoothScroll()
+      }
+    }
+
+    const handleTouchEnd = () => {
+      isTouching = false
+    }
+
+    // Add event listeners
+    window.addEventListener('wheel', handleWheel, { passive: false })
+    window.addEventListener('touchstart', handleTouchStart, { passive: true })
+    window.addEventListener('touchmove', handleTouchMove, { passive: true })
+    window.addEventListener('touchend', handleTouchEnd, { passive: true })
+
+    // Handle keyboard scrolling
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(e.key)) {
+        e.preventDefault()
+        const scrollStep = e.key === 'ArrowDown' ? 100 : 
+                          e.key === 'ArrowUp' ? -100 :
+                          e.key === 'PageDown' ? window.innerHeight * 0.8 :
+                          e.key === 'PageUp' ? -window.innerHeight * 0.8 :
+                          e.key === 'Home' ? -Infinity :
+                          e.key === 'End' ? Infinity :
+                          e.key === ' ' ? 100 : 0
+
+        scrollTarget = Math.max(0, Math.min(
+          document.documentElement.scrollHeight - window.innerHeight,
+          (scrollTarget || window.scrollY) + scrollStep
+        ))
+
+        if (!isScrolling) {
+          currentScroll = window.scrollY
+          isScrolling = true
+          smoothScroll()
+        }
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel)
+      window.removeEventListener('touchstart', handleTouchStart)
+      window.removeEventListener('touchmove', handleTouchMove)
+      window.removeEventListener('touchend', handleTouchEnd)
+      window.removeEventListener('keydown', handleKeyDown)
+      if (rafId) {
+        cancelAnimationFrame(rafId)
+      }
+    }
+  }, [])
 
   const navigateToHackathons = () => {
     router.push('/hackathons')
@@ -147,7 +274,7 @@ export default function PortfolioLanding() {
   ];
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? 'bg-black text-gray-200' : 'bg-white text-gray-700'} transition-colors duration-300`}>
+    <div ref={scrollContainerRef} className={`min-h-screen ${isDarkMode ? 'bg-black text-gray-200' : 'bg-white text-gray-700'} transition-colors duration-300`}>
       <div className="flex flex-col items-center justify-center p-4 min-h-screen">
 
         <Button

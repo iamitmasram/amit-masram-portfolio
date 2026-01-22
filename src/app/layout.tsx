@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import AmitIcon from '@/assets/alog.ico'
+import AmitIcon from '@/assets/alogo2.ico'
 import { Inter } from 'next/font/google'
 import { Analytics } from "@vercel/analytics/next"
 
