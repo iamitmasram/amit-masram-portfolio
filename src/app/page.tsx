@@ -168,7 +168,7 @@ export default function PortfolioLanding() {
                 alt="Amit Masram"
                 width={90}
                 height={90}
-                className="rounded-full object-cover"
+                className="rounded-lg object-cover"
               />
             </div>
             <div className="flex flex-col items-start pl-4 justify-start" style={{ marginTop: '-0.5rem' }}>

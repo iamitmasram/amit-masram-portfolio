@@ -1,6 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import AmitIcon from '@/assets/alogo2.ico'
+import AmitIcon from '@/assets/alogo.ico'
 import { Inter } from 'next/font/google'
 import { Analytics } from "@vercel/analytics/next"
 
@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Amit Masram",
-  description: "Created with the help of Frontend Tribe",
+  description: "Amit Masram Wikipedia",
   icons: {
     icon: AmitIcon.src, // Use the AmitIcon as the favicon
   },
