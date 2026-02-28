@@ -161,17 +161,17 @@ export default function PortfolioLanding() {
 
         <main className="max-w-2xl w-full p-6">
 
-          <div className="flex items-center gap-6 mb-6">
+          <div className="flex flex-nowrap items-center gap-3 sm:gap-6 mb-6">
             <div className="flex-shrink-0 flex items-start pt-8">
               <Image
                 src={AmitImage}
                 alt="Amit Masram"
                 width={90}
                 height={90}
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover w-[72px] h-[72px] sm:w-[90px] sm:h-[90px]"
               />
             </div>
-            <div className="flex flex-col items-start pl-4 justify-start" style={{ marginTop: '-0.5rem' }}>
+            <div className="flex flex-col items-start pl-2 sm:pl-4 justify-start min-w-0 flex-1" style={{ marginTop: '-0.5rem' }}>
               <h1
                 className={`text-2xl md:text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-black'}`}
                 style={{ marginBottom: '0.25rem' }}
@@ -242,15 +242,17 @@ export default function PortfolioLanding() {
             <h2 className={`text-lg font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
             <div className="flex flex-col gap-0">
               {projectItems.map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <Image
-                    src={item.image || "https://via.placeholder.com/60"}
-                    alt={item.name}
-                    width={30}
-                    height={30}
-                    className="object-cover rounded-md"
-                  />
-                  <div className="flex-1">
+                <div key={index} className="flex flex-nowrap items-center gap-3">
+                  <div className="flex-shrink-0">
+                    <Image
+                      src={item.image || "https://via.placeholder.com/60"}
+                      alt={item.name}
+                      width={30}
+                      height={30}
+                      className="object-cover rounded-md w-[30px] h-[30px]"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
                     <a href={item.link} className="block hover:underline">
                       <h3 className="text-[15px] font-semibold leading-tight">{item.name}</h3>
                       <p className="text-[0.97rem] text-gray-500">{item.description}</p>
