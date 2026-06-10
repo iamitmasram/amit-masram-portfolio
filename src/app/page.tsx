@@ -6,8 +6,13 @@ import { Moon, Sun, ChevronDown, ChevronUp } from "lucide-react"
 import { useRouter } from 'next/navigation'
 import { useDarkMode } from "@/lib/useDarkMode"
 import Image from 'next/image'
-import AmitImage from '@/assets/amitmasram4.png'
+import AmitImage from '@/assets/amitmasram1.jpeg'
+import { JetBrains_Mono } from 'next/font/google'
 
+const jetbrainsMono = JetBrains_Mono({
+      subsets: ['latin'],
+      display: 'swap',
+    })
 
 interface WorkItem {
       company: string;

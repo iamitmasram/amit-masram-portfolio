@@ -1,10 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import AmitIcon from '@/assets/alogo.ico'
+import AmitIcon from '@/assets/alogo1.ico'
 import { Inter } from 'next/font/google'
 import { Analytics } from "@vercel/analytics/next"
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 })

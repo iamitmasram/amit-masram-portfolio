@@ -3,7 +3,13 @@ import { useRouter } from 'next/navigation'
 import { useDarkMode } from "@/lib/useDarkMode"
 import { Moon, Sun } from 'lucide-react'
 import Image from 'next/image'
+import { JetBrains_Mono } from 'next/font/google'
 import EvolutionImage from '../../../assets/blog/evolution.png'
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export default function EvolutionOfInformationPage() {
   const router = useRouter()
@@ -12,15 +18,47 @@ export default function EvolutionOfInformationPage() {
   return (
     <div className={`min-h-screen ${isDarkMode ? 'bg-gray-900' : 'bg-gray-50'} transition-colors duration-300`}>
       {/* Header */}
-      <div className="flex justify-between items-center p-6 max-w-4xl mx-auto">
+      <div className="flex justify-between items-center gap-3 p-4 sm:p-6 max-w-4xl mx-auto">
         <button
           onClick={() => router.back()}
-          className={`flex items-center gap-2 ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}
+          className={`flex items-center gap-2 text-xs sm:text-sm shrink-0 ${jetbrainsMono.className} ${isDarkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'} transition-colors`}
         >
-          ← BACK
+          <span
+            className={`
+              font-bold
+              transition-all
+              ${isDarkMode ? 'text-gray-100' : 'text-gray-800'}
+              text-2xl sm:text-base
+              flex-shrink-0
+              flex items-center justify-center
+              h-7 w-7 sm:h-auto sm:w-auto
+              mr-0 sm:mr-1
+              self-center
+              relative -top-1.5 sm:top-0
+            `}
+            style={{ lineHeight: 1 }}
+          >
+            <span className="inline-block relative top-0 sm:top-[5px]">
+              ←
+            </span>
+          </span>
+
+          <span
+            className={`
+              ${jetbrainsMono.className}
+              ${/* Center the label horizontally on mobile, inline on larger screens */''}
+              text-center sm:text-left
+              w-full sm:w-auto
+              block sm:inline
+            `}
+          >
+            BACK
+          </span>
+
         </button>
-        <div className="text-sm text-gray-500">
-          Dec 28, 2025 • Reflective History
+        <div className={`text-xs sm:text-sm text-gray-500 text-right whitespace-nowrap shrink min-w-0 ${jetbrainsMono.className}`}>
+          Dec 28, 2025
+
         </div>
 
       </div>
