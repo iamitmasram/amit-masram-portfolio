@@ -51,7 +51,7 @@ const hackathons: HackathonEntry[] = [
     date: "October 21th - December 17, 2024",
     name: "LLM Agents MOOC Hackathon",
     location: "Online",
-    description: "Createing an AI message agent which will automate your messages across the platforms via SnipAI.",
+    description: "Creating an AI message agent which will automate your messages across the platforms via SnipAI.",
     tags: [],
     sourceUrl: "https://trysnipai.co/",
     imageUrl:"https://tse4.mm.bing.net/th?id=OIP.SuN4hrD97rwJJu90dyuO_QHaEK&pid=Api&P=0&h=180"

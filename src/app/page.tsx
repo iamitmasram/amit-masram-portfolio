@@ -63,13 +63,13 @@ const projectItems: ProjectItem[] = [
 
       {
             name: "Tourease",
-            description: "An AI app providing personalized itineraries and real-time travel recommendations.",
+            description: "Plans personalized trip itineraries and adjusts recommendations in real time as you travel.",
             link: "https://tourease.netlify.app/",
             image: "https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
       },
       {
             name: "Inova8",
-            description: "A platform for businesses and founders to transform ideas into real AI driven solutions.",
+            description: "Helps founders & businesses go from a rough idea to a working AI prototype, fast.",
             link: "https://inova8.in/",
             image: "https://scontent.cdninstagram.com/v/t51.82787-19/518133280_17850285762509742_2841479434577457000_n.jpg?_nc_cat=110&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=u0asY7NWM6QQ7kNvwHKPIUP&_nc_oc=Adp2OH3vk7VZ5BLIgT9_NwNumkOGHnhwe5ymX663CfBmhtttcx0K3Asqv98MCerNX_KJsQxGCGv5EkvEDaLkUQPj&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=NkmMniVmx5p8KJDRSwi5SA&_nc_ss=7b6a8&oh=00_Af-oh1lbZN1zoCKgngfZYf9FKIXHJP21gpOrBUI4nMxlHQ&oe=6A440C46"
       },
@@ -84,13 +84,13 @@ const projectItems: ProjectItem[] = [
 
       {
             name: "Hometro",
-            description: "Find the homes and rentals properies within your city on a exclusive deals ",
+            description: "Find homes and rental properties in your city with exclusive deals you won't see listed elsewhere. ",
             link: "https://hometro.in/",
             image: "https://scontent.cdninstagram.com/v/t51.82787-19/720064387_17925033396355074_2662839305886314536_n.jpg?_nc_cat=106&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=T-vd_eH5FwMQ7kNvwHiL4Xs&_nc_oc=Adp2qSVqjM5fw5Yvd_xjd8mrtbPxiQYWyXC7HCQY0gazjouTWPxjuv_XxA405V38zEC3KsMBKeTQKyzHI_XJ1JyS&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=-t6iUzR2YAhIZkYTSL2u2A&_nc_ss=7b6a8&oh=00_Af-oZdIak9bbxXZdP2UdXuvQQMmJBTOzoJcmUXkCXxZvHg&oe=6A441625"
       },
       {
             name: "Legaly",
-            description: "Analyze and verify any document, paper, or agreement using AI.",
+            description: "Upload any contract or document and get an AI-powered breakdown of what it actually says.",
             link: "https://legalyai.vercel.app/",
             image: "https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
       },
