@@ -6,7 +6,12 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        anthropicSerif: ['"Anthropic Serif"', 'Georgia', 'serif'],
+        signifier: ['signifier', '"signifier Fallback"'],
+      },
+    },
   },
   plugins: [],
 }

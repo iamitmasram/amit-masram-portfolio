@@ -12,7 +12,7 @@ import { JetBrains_Mono } from 'next/font/google'
 const jetbrainsMono = JetBrains_Mono({
       subsets: ['latin'],
       display: 'swap',
-    })
+})
 
 interface WorkItem {
       company: string;
@@ -126,10 +126,12 @@ export default function PortfolioLanding() {
       const navigateToHackathons = () => {
             router.push('/hackathons')
       }
+      const navigateToWrintings = () => {
+            router.push('/writings')
+      }
       const navigateToEvolutionOfInformation = () => {
             router.push('/evolution')
       }
-
       const navigateToOpenSource = () => {
             router.push('/opensource')
       }
@@ -164,7 +166,7 @@ export default function PortfolioLanding() {
                               <span className="sr-only">Toggle theme</span>
                         </Button>
 
-                        <main className="max-w-2xl w-full p-6">
+                        <main className="max-w-2xl w-full p-4 sm:p-6">
 
                               <div className="flex flex-nowrap items-center gap-2 sm:gap-4 md:gap-6 mb-6">
                                     <div className="flex-shrink-0 flex items-start pt-4 md:pt-8">
@@ -178,13 +180,13 @@ export default function PortfolioLanding() {
                                     </div>
                                     <div className="flex flex-col items-start pl-2 sm:pl-4 justify-start min-w-0 flex-1" style={{ marginTop: '-0.5rem' }}>
                                           <h1
-                                                className={`text-2xl md:text-4xl font-bold ${isDarkMode ? 'text-white' : 'text-black'}`}
+                                                className={`text-[1.625rem] sm:text-3xl md:text-4xl font-bold font-signifier ${isDarkMode ? 'text-white' : 'text-black'}`}
                                                 style={{ marginBottom: '0.25rem' }}
                                           >
                                                 Amit Masram
                                           </h1>
                                           {/* Location with minimal globe icon */}
-                                          <div className="flex items-center text-xs text-gray-500 mb-1">
+                                          <div className={`flex items-center text-xs ${isDarkMode ? "text-white-100" : "text-gray-500"} mb-1`}>
                                                 {/* Minimal Globe Icon */}
                                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.2">
                                                       <circle cx="10" cy="10" r="8" stroke="currentColor" fill="none" />
@@ -260,7 +262,7 @@ export default function PortfolioLanding() {
                                                       <div className="flex-1 min-w-0">
                                                             <a href={item.link} className="block hover:underline">
                                                                   <h3 className="text-[14px] md:text-[15px] font-semibold leading-tight">{item.name}</h3>
-                                                                  <p className="text-[0.9rem] md:text-[0.97rem] text-gray-500">{item.description}</p>
+                                                                  <p className={`text-[0.85rem] md:text-[0.95rem] ${isDarkMode ? "text-gray-300" : "text-gray-500"}`}>{item.description}</p>
                                                             </a>
                                                       </div>
                                                 </div>
@@ -274,7 +276,7 @@ export default function PortfolioLanding() {
                               <div className="mb-5">
                                     <div className="flex items-center justify-between mb-2">
                                           <h2 className={`text-base md:text-lg font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>Writings</h2>
-                                          <a href="#" className="text-blue-500 text-xs md:text-sm font-medium underline hover:underline">View all</a>
+                                          <span className="text-blue-600 text-xs md:text-sm font-medium hover:underline cursor-pointer"><span onClick={navigateToWrintings}>View all</span> </span>
                                     </div>
                                     <ul className="space-y-3 list-none pl-0">
                                           {writingItems.map((item, index) => (
@@ -306,7 +308,7 @@ export default function PortfolioLanding() {
                                                                   <h3 className="text-[14px] md:text-[15px] font-semibold leading-tight group-hover:underline">{item.title}</h3>
                                                             </a>
                                                       )}
-                                                      <p className="text-[0.9rem] md:text-[0.97rem] text-gray-500 ml-6">{item.description}</p>
+                                                      <p className={`text-[0.85rem] md:text-[0.95rem] ${isDarkMode ? "text-gray-300" : "text-gray-500"} ml-6`}>{item.description}</p>
                                                 </li>
                                           ))}
                                     </ul>
