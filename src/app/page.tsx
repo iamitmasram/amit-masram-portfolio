@@ -55,7 +55,7 @@ const workItems: WorkItem[] = [
 
 // Sample thought items
 const thoughtItems: ThoughtItem[] = [
-      { content: " \"We're here for a limited time, but the possibilities are endless.\" -- Let's talk!" },
+      { content: " \"We're here for a limited time, but the possibilities are endless.\" – Let's talk!" },
 
 ];
 
@@ -68,10 +68,10 @@ const projectItems: ProjectItem[] = [
             image: "https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
       },
       {
-            name: "Fluentype",
-            description: "Helps users to improve typing speed while learning English — built from a simple idea to support a friend.",
-            link: "https://fluentype.xyz/",
-            image: "https://i.pinimg.com/1200x/c4/35/6c/c4356cd5454d06585e0a46066b555172.jpg"
+            name: "Inova8",
+            description: "A platform for businesses and founders to transform ideas into real AI driven solutions.",
+            link: "https://inova8.in/",
+            image: "https://scontent.cdninstagram.com/v/t51.82787-19/518133280_17850285762509742_2841479434577457000_n.jpg?_nc_cat=110&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=u0asY7NWM6QQ7kNvwHKPIUP&_nc_oc=Adp2OH3vk7VZ5BLIgT9_NwNumkOGHnhwe5ymX663CfBmhtttcx0K3Asqv98MCerNX_KJsQxGCGv5EkvEDaLkUQPj&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=NkmMniVmx5p8KJDRSwi5SA&_nc_ss=7b6a8&oh=00_Af-oh1lbZN1zoCKgngfZYf9FKIXHJP21gpOrBUI4nMxlHQ&oe=6A440C46"
       },
 
       {
@@ -86,7 +86,7 @@ const projectItems: ProjectItem[] = [
             name: "Hometro",
             description: "Find the homes and rentals properies within your city on a exclusive deals ",
             link: "https://hometro.in/",
-            image: "https://instagram.fnag1-2.fna.fbcdn.net/v/t51.2885-19/601498931_17898965889355074_397475704889087774_n.jpg?efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fnag1-2.fna.fbcdn.net&_nc_cat=106&_nc_oc=Q6cZ2QFggeEgIe05IRup7006fsyrJ-_rD0Y-M7ChgO9xEcBUSF-AwMUkwO2_YNbAZnrZSqzt8gpTAMSHD0jY5OiupMbz&_nc_ohc=FpFKpfnjEm0Q7kNvwHH4V7S&_nc_gid=IGujkcPvSz6YphP39W2I8Q&edm=ALGbJPMBAAAA&ccb=7-5&oh=00_AfmFGPcXsCbsnVtJJAxCu748tXLmI3NhtYmF6oBII-9jzA&oe=694E3607&_nc_sid=7d3ac5"
+            image: "https://scontent.cdninstagram.com/v/t51.82787-19/720064387_17925033396355074_2662839305886314536_n.jpg?_nc_cat=106&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=T-vd_eH5FwMQ7kNvwHiL4Xs&_nc_oc=Adp2qSVqjM5fw5Yvd_xjd8mrtbPxiQYWyXC7HCQY0gazjouTWPxjuv_XxA405V38zEC3KsMBKeTQKyzHI_XJ1JyS&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=-t6iUzR2YAhIZkYTSL2u2A&_nc_ss=7b6a8&oh=00_Af-oZdIak9bbxXZdP2UdXuvQQMmJBTOzoJcmUXkCXxZvHg&oe=6A441625"
       },
       {
             name: "Legaly",
@@ -95,23 +95,12 @@ const projectItems: ProjectItem[] = [
             image: "https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
       },
       {
-            name: "SnipAI",
-            description: "The Messenger AI Agent - In progress...",
-            link: "https://trysnipai.vercel.app/",
-            image: "https://i.pinimg.com/564x/6b/0a/3a/6b0a3a3e6d3009793e96e2b2e99475ac.jpg"
-      },
-      {
             name: "OpenLaunch",
             description: "A Product Hunt-inspired platform to launch brands, software, and products online.",
             link: "https://openlaunch.lovable.app",
             image: "https://i.pinimg.com/736x/50/29/69/5029694bfb2ceca6026b036a4769b71f.jpg"
       },
-      {
-            name: "Proptrader",
-            description: "Curious to building a trading platform for real estate. (In Progress...)",
-            link: "https://proptrader.co/",
-            image: "https://i.pinimg.com/1200x/c4/35/6c/c4356cd5454d06585e0a46066b555172.jpg"
-      },
+
 
 
 
@@ -229,7 +218,7 @@ export default function PortfolioLanding() {
 
 
 
-                              <div className="mb-5 space-y-4 text-left">
+                              <div className="mb-5 space-y-2 text-left">
                                     <p className={`text-[0.95rem] md:text-[1.037rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
                                           I try to put my work out into the world in a way that contributes to others and helps make things better.
                                     </p>
@@ -245,24 +234,24 @@ export default function PortfolioLanding() {
 
 
 
-                              <div className="mb-5">
+                              <div className="mb-3">
                                     <h2 className={`text-base md:text-lg font-bold mb-2 ${isDarkMode ? 'text-white' : 'text-black'}`}>Projects</h2>
                                     <div className="flex flex-col gap-0">
                                           {projectItems.map((item, index) => (
-                                                <div key={index} className="flex flex-nowrap items-center gap-3">
-                                                      <div className="flex-shrink-0">
+                                                <div key={index} className="flex flex-nowrap items-start gap-2">
+                                                      <div className="flex-shrink-0 mt-4">
                                                             <Image
                                                                   src={item.image || "https://via.placeholder.com/60"}
                                                                   alt={item.name}
-                                                                  width={30}
-                                                                  height={30}
-                                                                  className="object-cover rounded-md w-[30px] h-[30px]"
+                                                                  width={20}
+                                                                  height={20}
+                                                                  className="object-cover rounded-md w-[28px] h-[28px] md:w-[28px] md:h-[28px]"
                                                             />
                                                       </div>
                                                       <div className="flex-1 min-w-0">
                                                             <a href={item.link} className="block hover:underline">
                                                                   <h3 className="text-[14px] md:text-[15px] font-semibold leading-tight">{item.name}</h3>
-                                                                  <p className={`text-[0.85rem] md:text-[0.95rem] ${isDarkMode ? "text-gray-300" : "text-gray-500"}`}>{item.description}</p>
+                                                                  <p className={`mt-1 text-[0.85rem] md:text-[0.95rem] ${isDarkMode ? "text-gray-300" : "text-gray-500"}`}>{item.description}</p>
                                                             </a>
                                                       </div>
                                                 </div>
@@ -281,53 +270,56 @@ export default function PortfolioLanding() {
                                     <ul className="space-y-3 list-none pl-0">
                                           {writingItems.map((item, index) => (
                                                 <li key={index} className="flex flex-col gap-0">
-                                                      {item.onClick ? (
-                                                            <div
-                                                                  onClick={item.onClick}
-                                                                  className="flex flex-row items-center gap-3 group cursor-pointer"
-                                                            >
-                                                                  <span
-                                                                        className={`text-[1rem] md:text-[1.1rem] select-none ${isDarkMode ? 'text-gray-400' : 'text-gray-400'}`}
-                                                                        style={{ lineHeight: '1.5', marginTop: '2px' }}
+                                                      <div className="flex items-start gap-3">
+                                                            {item.onClick ? (
+                                                                  <div
+                                                                        onClick={item.onClick}
+                                                                        className="flex items-start gap-3 group cursor-pointer flex-1"
                                                                   >
-                                                                        ⁕
-                                                                  </span>
-                                                                  <h3 className="text-[14px] md:text-[15px] font-semibold leading-tight group-hover:underline">{item.title}</h3>
-                                                            </div>
-                                                      ) : (
-                                                            <a
-                                                                  href={item.link}
-                                                                  className="flex flex-row items-center gap-3 group"
-                                                            >
-                                                                  <span
-                                                                        className={`text-[1rem] md:text-[1.1rem] select-none ${isDarkMode ? 'text-gray-400' : 'text-gray-400'}`}
-                                                                        style={{ lineHeight: '1.5', marginTop: '2px' }}
+                                                                        <span
+                                                                              className={`mt-2 md:mt-3 text-[1rem] md:text-[1.1rem] select-none ${isDarkMode ? 'text-gray-400' : 'text-gray-400'}`}
+                                                                              style={{ lineHeight: '1.5' }}
+                                                                        >
+                                                                              ⁕
+                                                                        </span>
+                                                                        <div className="min-w-0 flex-1">
+                                                                              <h3 className="text-[14px] md:text-[15px] font-semibold leading-tight group-hover:underline">{item.title}</h3>
+                                                                              <p className={`text-[0.85rem] md:text-[0.95rem] ${isDarkMode ? "text-gray-300" : "text-gray-500"} mt-1`}>{item.description}</p>
+                                                                        </div>
+                                                                  </div>
+                                                            ) : (
+                                                                  <a
+                                                                        href={item.link}
+                                                                        className="flex items-start gap-3 group flex-1"
                                                                   >
-                                                                        ⁕
-                                                                  </span>
-                                                                  <h3 className="text-[14px] md:text-[15px] font-semibold leading-tight group-hover:underline">{item.title}</h3>
-                                                            </a>
-                                                      )}
-                                                      <p className={`text-[0.85rem] md:text-[0.95rem] ${isDarkMode ? "text-gray-300" : "text-gray-500"} ml-6`}>{item.description}</p>
+                                                                        <span
+                                                                              className={`mt-2 md:mt-3 text-[1rem] md:text-[1.1rem] select-none ${isDarkMode ? 'text-gray-400' : 'text-gray-400'}`}
+                                                                              style={{ lineHeight: '1.5' }}
+                                                                        >
+                                                                              ⁕
+                                                                        </span>
+                                                                        <div className="min-w-0 flex-1">
+                                                                              <h3 className="text-[14px] md:text-[15px] font-semibold leading-tight group-hover:underline">{item.title}</h3>
+                                                                              <p className={`text-[0.85rem] md:text-[0.95rem] ${isDarkMode ? "text-gray-300" : "text-gray-500"} mt-1`}>{item.description}</p>
+                                                                        </div>
+                                                                  </a>
+                                                            )}
+                                                      </div>
                                                 </li>
                                           ))}
                                     </ul>
                               </div>
 
-                              <div className="mb-10">
-                                    <h2 className={`text-base md:text-lg font-bold mb-5 ${isDarkMode ? 'text-white' : 'text-black'}`}>Inner Code</h2>
+                              <div className="mb-6 flex flex-col">
+                                    <h2 className={`text-base md:text-lg font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>Inner Code</h2>
                                     {thoughtItems.map((item, index) => (
-                                          <div key={index} className="mb-4">
-
-                                                <p className="text-sm md:text-base italic font-thin" style={{ fontFamily: 'Georgia, serif' }}>{item.content}</p>
-
-
-
+                                          <div key={index} className="mb-3 w-full md:w-[90%] lg:w-[80%] mx-auto">
+                                                <p className="text-sm md:text-[0.95rem] lg:text-[0.92rem] italic font-thin text-center" style={{ fontFamily: 'Georgia, serif' }}>{item.content}</p>
                                           </div>
                                     ))}
                               </div>
                               <div className="flex flex-col items-center gap-4 mb-8">
-                                    <hr className="w-full border-t border-gray-300 my-2" />
+                                    <hr className="w-full border-t border-gray-300 mt-1 mb-2" />
                                     <p className="text-[14px] md:text-[15px] text-center">
                                           My DMs are always open — <a href="https://x.com/messages/compose?recipient_id=1332622199786598403" target="_blank" rel="noopener noreferrer" className="text-blue-500 underline">reach out on X</a> anytime.
                                     </p>

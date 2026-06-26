@@ -58,7 +58,7 @@ const hackathons: HackathonEntry[] = [
 
   },
 
-  
+
 ]
 
 export default function HackathonsPage() {
@@ -70,7 +70,7 @@ export default function HackathonsPage() {
       <div className="max-w-2xl mx-auto">
         <div className="flex justify-between items-center mb-5">
           <h1 className={`text-xl md:text-2xl font-bold ${isDarkMode ? 'text-white' : 'text-black'}`}>Hackathons</h1>
-          
+
           {/* <Button
             variant="outline"
             size="icon"
@@ -85,10 +85,10 @@ export default function HackathonsPage() {
         I like to participating in global hackathons, primarily online, where I collaborate with individuals and diverse teams to solve challenges and build projects.
       </p>
       <hr className="w-full border-t border-gray-300 my-2" />
-        
+
         {/* <div className="mb-8">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             onClick={() => router.push('/')}
             className={`${isDarkMode ? 'text-gray-200 border-gray-200 hover:bg-gray-800' : 'text-gray-700 border-gray-700 hover:bg-gray-100'}`}
           >
@@ -102,29 +102,29 @@ export default function HackathonsPage() {
               <div className="flex-shrink-0 mr-4">
                 <Avatar className="w-9 h-9 flex items-center justify-center overflow-hidden">
                   {hackathon.imageUrl ? (
-                    <Image 
-                      src={hackathon.imageUrl} 
-                      alt={hackathon.name} 
+                    <Image
+                      src={hackathon.imageUrl}
+                      alt={hackathon.name}
                       width={36}
                       height={36}
-                      className="object-cover" 
+                      className="object-cover"
                     />
                   ) : (
                     <span className="text-xl">{hackathon.name[0]}</span>
                   )}
                 </Avatar>
               </div>
-              {/* 
+              {/*
               <div className="space-y-8">
           {hackathons.map((hackathon, index) => (
             <div key={index} className="flex">
               <div className="flex-shrink-0 mr-4">
                 <div className="w-9 h-9 flex items-center justify-center overflow-hidden bg-gray-200 rounded-md">
                   {hackathon.imageUrl ? (
-                    <img 
-                      src={hackathon.imageUrl} 
-                      alt={hackathon.name} 
-                      className="w-full h-full object-cover" 
+                    <img
+                      src={hackathon.imageUrl}
+                      alt={hackathon.name}
+                      className="w-full h-full object-cover"
                     />
                   ) : (
                     <span className="text-xl text-gray-600">{hackathon.name[0]}</span>
@@ -134,9 +134,9 @@ export default function HackathonsPage() {
                */}
               <div className="flex-grow">
                 <p className={`text-[11px] md:text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{hackathon.date}</p>
-                <h2 className={`text-[13px] md:text-sm font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>{hackathon.name}</h2>
+                <h2 className={`text-[14px] md:text-[15px] font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>{hackathon.name}</h2>
                 <p className={`text-[11px] md:text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{hackathon.location}</p>
-                <p className={`text-[0.9rem] md:text-[1rem] text-white-600 mb-5 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{hackathon.description}</p>
+                <p className={`text-[0.85rem] md:text-[0.95rem] text-white-600 mb-5 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{hackathon.description}</p>
                 <div className="mt-2 flex items-center space-x-2">
                   {hackathon.tags.map((tag, tagIndex) => (
                     <Badge key={tagIndex} variant="secondary">{tag}</Badge>
@@ -158,5 +158,3 @@ export default function HackathonsPage() {
     </div>
   )
 }
-
-

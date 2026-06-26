@@ -48,7 +48,7 @@ const hackathons: OpenSourceEntry[] = [
     imageUrl:"https://user-images.githubusercontent.com/63473496/153487849-4f094c16-d21c-463e-9971-98a8af7ba372.png"
   },
 
- 
+
 ]
 
 export default function OpenSourcePage() {
@@ -65,19 +65,19 @@ export default function OpenSourcePage() {
         Here are my contributions to various open source projects and events:
         </p>
         <hr className="w-full border-t border-gray-300 my-2" />
-        
+
         <div className="space-y-8">
           {hackathons.map((hackathon, index) => (
             <div key={index} className="flex">
               <div className="flex-shrink-0 mr-4">
                 <Avatar className="w-9 h-9 flex items-center justify-center overflow-hidden">
                   {hackathon.imageUrl ? (
-                    <Image 
-                      src={hackathon.imageUrl} 
-                      alt={hackathon.name} 
+                    <Image
+                      src={hackathon.imageUrl}
+                      alt={hackathon.name}
                       width={36}
                       height={36}
-                      className="object-cover" 
+                      className="object-cover"
                     />
                   ) : (
                     <span className="text-xl">{hackathon.name[0]}</span>
@@ -86,9 +86,9 @@ export default function OpenSourcePage() {
               </div>
               <div className="flex-grow">
                 <p className={`text-[11px] md:text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{hackathon.date}</p>
-                <h2 className={`text-[13px] md:text-sm font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>{hackathon.name}</h2>
+                <h2 className={`text-[14px] md:text-[15px] font-semibold ${isDarkMode ? 'text-white' : 'text-black'}`}>{hackathon.name}</h2>
                 <p className={`text-[11px] md:text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{hackathon.location}</p>
-                <p className={`text-[0.9rem] md:text-[1rem] text-white-600 mb-5 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{hackathon.description}</p>
+                <p className={`text-[0.85rem] md:text-[0.95rem] text-white-600 mb-5 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>{hackathon.description}</p>
                 <div className="mt-2 flex items-center space-x-2">
                   {hackathon.tags.map((tag, tagIndex) => (
                     <Badge key={tagIndex} variant="secondary">{tag}</Badge>
@@ -119,7 +119,7 @@ export default function OpenSourcePage() {
 // import { Badge } from "@/components/ui/badge"
 // import { Github, Moon, Sun } from "lucide-react"
 // import { useRouter } from 'next/navigation'
-// import { useDarkMode } from "@/lib/useDarkMode" 
+// import { useDarkMode } from "@/lib/useDarkMode"
 
 // interface OpenSourceEntry {
 //   date: string
@@ -150,7 +150,7 @@ export default function OpenSourcePage() {
 //     sourceUrl: "https://github.com/example/hack-the-north",
 //     imageUrl:"https://s3.amazonaws.com/my.mlh.io/applications/logos/000/000/638/thumb/MyMLH_Icon.png?1638895540"
 //   },
- 
+
 // ]
 
 // export default function OpenSourcePage() {
@@ -175,28 +175,28 @@ export default function OpenSourcePage() {
 //         <p className="text-white-600 mb-8">
 //           Here are my contributions to open source, where I collaborate with diverse teams to solve challenges and build innovative projects.
 //         </p>
-        
+
 //         <div className="space-y-8">
 //           {hackathons.map((hackathon, index) => (
 //             <div key={index} className="flex">
 //               <div className="flex-shrink-0 mr-4 relative">
 //                 <Avatar className="w-9 h-9 flex items-center justify-center overflow-hidden">
 //                   {hackathon.imageUrl ? (
-//                     <img 
-//                       src={hackathon.imageUrl} 
-//                       alt={hackathon.name} 
-//                       className="w-full h-full object-cover" 
+//                     <img
+//                       src={hackathon.imageUrl}
+//                       alt={hackathon.name}
+//                       className="w-full h-full object-cover"
 //                     />
 //                   ) : (
 //                     <span className="text-xl">{hackathon.name[0]}</span>
 //                   )}
 //                 </Avatar>
-//                 <div 
+//                 <div
 //                   className={`absolute right-0 top-0 w-px animated-line ${isDarkMode ? 'bg-gray-700' : 'bg-gray-300'}`}
 //                 ></div>
 //               </div>
 //               <div className="flex-grow relative pt-1">
-//                 <div 
+//                 <div
 //                   className={`absolute left-[-12px] top-[10px] w-3 h-px ${isDarkMode ? 'bg-gray-700' : 'bg-gray-300'}`}
 //                 ></div>
 //                 <p className={`text-xs ${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{hackathon.date}</p>

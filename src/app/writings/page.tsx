@@ -12,31 +12,8 @@ interface WritingsEntry {
     description: string
     tags: string[]
     sourceUrl?: string
+    onClick?: () => void
 }
-
-const writings: WritingsEntry[] = [
-    {
-        date: "October 11th - 13th, 2024",
-        name: "Build fast Ship fast with Replit & Cursor Hackathon",
-        description: "Developed an AI application which delivered real-time access to patients using augmented reality.",
-        tags: [],
-        sourceUrl: "https://github.com/example/hack-western-5",
-    },
-    {
-        date: "October 21th - December 17, 2024",
-        name: "Translating Animal Language: Science Fiction or Future Science? (In Progress)",
-        description: "Exploring my plans and aspirations.",
-        tags: [],
-        sourceUrl: "https://trysnipai.co/",
-    },
-    {
-        date: "October 1st - 31st, 2024",
-        name: "How Humans Have Stored Information: From Stone Marks to the Internet Age",
-        description: "A history of humanity's journey in storing and sharing information.",
-        tags: [],
-        sourceUrl: "https://github.com/Amitmasram/EventSphere-Hacktoberfest-2024",
-    },
-]
 
 // Timeline colors
 const LINE_COLOR = "#d4d8dd"
@@ -121,43 +98,89 @@ function WritingCard({
             </div>
 
             {/* ── Right: writing content ── */}
-            <a
-                href={writing.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-grow pb-10 block group"
-                style={{ textDecoration: "none", cursor: writing.sourceUrl ? "pointer" : "default" }}
-            >
-                <p
-                    className={`text-[11px] md:text-xs ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}
+            {writing.onClick ? (
+                <div
+                    role="button"
+                    tabIndex={0}
+                    onClick={writing.onClick}
+                    onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                            event.preventDefault()
+                            writing.onClick?.()
+                        }
+                    }}
+                    className="flex-grow pb-10 block group cursor-pointer"
+                    style={{ textDecoration: "none" }}
                 >
-                    {writing.date}
-                </p>
-                <h2
-                    className={`text-[14px] md:text-[15px] font-semibold ${isDarkMode ? "text-white" : "text-black"} group-hover:underline transition-all`}
-                >
-                    {writing.name}
-                </h2>
-                {writing.location && (
                     <p
                         className={`text-[11px] md:text-xs ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}
                     >
-                        {writing.location}
+                        {writing.date}
                     </p>
-                )}
-                <p
-                    className={`text-[0.85rem] md:text-[0.95rem] mt-1 ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
-                >
-                    {writing.description}
-                </p>
-                <div className="mt-2 flex flex-wrap items-center gap-2">
-                    {writing.tags.map((tag, tagIndex) => (
-                        <Badge key={tagIndex} variant="secondary">
-                            {tag}
-                        </Badge>
-                    ))}
+                    <h2
+                        className={`text-[14px] md:text-[15px] font-semibold ${isDarkMode ? "text-white" : "text-black"} group-hover:underline transition-all`}
+                    >
+                        {writing.name}
+                    </h2>
+                    {writing.location && (
+                        <p
+                            className={`text-[11px] md:text-xs ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}
+                        >
+                            {writing.location}
+                        </p>
+                    )}
+                    <p
+                        className={`text-[0.85rem] md:text-[0.95rem] mt-1 ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
+                    >
+                        {writing.description}
+                    </p>
+                    <div className="mt-2 flex flex-wrap items-center gap-2">
+                        {writing.tags.map((tag, tagIndex) => (
+                            <Badge key={tagIndex} variant="secondary">
+                                {tag}
+                            </Badge>
+                        ))}
+                    </div>
                 </div>
-            </a>
+            ) : (
+                <a
+                    href={writing.sourceUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-grow pb-10 block group"
+                    style={{ textDecoration: "none", cursor: writing.sourceUrl ? "pointer" : "default" }}
+                >
+                    <p
+                        className={`text-[11px] md:text-xs ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}
+                    >
+                        {writing.date}
+                    </p>
+                    <h2
+                        className={`text-[14px] md:text-[15px] font-semibold ${isDarkMode ? "text-white" : "text-black"} group-hover:underline transition-all`}
+                    >
+                        {writing.name}
+                    </h2>
+                    {writing.location && (
+                        <p
+                            className={`text-[11px] md:text-xs ${isDarkMode ? "text-gray-400" : "text-gray-500"}`}
+                        >
+                            {writing.location}
+                        </p>
+                    )}
+                    <p
+                        className={`text-[0.85rem] md:text-[0.95rem] mt-1 ${isDarkMode ? "text-gray-300" : "text-gray-700"}`}
+                    >
+                        {writing.description}
+                    </p>
+                    <div className="mt-2 flex flex-wrap items-center gap-2">
+                        {writing.tags.map((tag, tagIndex) => (
+                            <Badge key={tagIndex} variant="secondary">
+                                {tag}
+                            </Badge>
+                        ))}
+                    </div>
+                </a>
+            )}
         </div>
     )
 }
@@ -165,6 +188,34 @@ function WritingCard({
 export default function WritingsPage() {
     const router = useRouter()
     const { isDarkMode, toggleDarkMode } = useDarkMode()
+
+    const navigateToEvolutionOfInformation = () => {
+        router.push('/evolution')
+    }
+
+    const writings: WritingsEntry[] = [
+        {
+            date: "October 11th - 13th, 2024",
+            name: "Build fast Ship fast with Replit & Cursor Hackathon",
+            description: "Developed an AI application which delivered real-time access to patients using augmented reality.",
+            tags: [],
+            sourceUrl: "https://github.com/example/hack-western-5",
+        },
+        {
+            date: "October 21th - December 17, 2024",
+            name: "Translating Animal Language: Science Fiction or Future Science? (In Progress)",
+            description: "Exploring my plans and aspirations.",
+            tags: [],
+            sourceUrl: "https://trysnipai.co/",
+        },
+        {
+            date: "October 1st - 31st, 2024",
+            name: "How Humans Have Stored Information: From Stone Marks to the Internet Age",
+            description: "A history of humanity's journey in storing and sharing information.",
+            tags: [],
+            onClick: navigateToEvolutionOfInformation,
+        },
+    ]
 
     return (
         <div
@@ -183,7 +234,7 @@ export default function WritingsPage() {
                 <p
                     className={`text-[0.95rem] md:text-[1.037rem] mb-5 ${isDarkMode ? "text-gray-200" : "text-gray-800"}`}
                 >
-                    I like to participating in global hackathons, primarily online, where I collaborate with individuals and diverse teams to solve challenges and build projects.
+                    I Sometimes write and share about my experiences, projects, and thoughts on technology, AI, and the future. Here are some of my recent writings and contributions.
                 </p>
 
                 <hr className="w-full border-t border-gray-300 my-2" />
