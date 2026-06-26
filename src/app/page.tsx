@@ -216,7 +216,7 @@ export default function PortfolioLanding() {
                                                 </a>
                                                 <span className="text-gray-400 mx-1">|</span>
                                                 <a
-                                                      href="https://github.com/amitmasram"
+                                                      href="https://github.com/iamitmasram"
                                                       target="_blank"
                                                       rel="noopener noreferrer"
                                                       className="hover:underline text-blue-600"
