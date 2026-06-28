@@ -58,6 +58,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: '*.fbcdn.net',
       }
+      ,
+      {
+        protocol: 'https',
+        hostname: 'babaconstruction.netlify.app',
+      }
     ],
   },
 };

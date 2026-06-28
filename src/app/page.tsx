@@ -61,27 +61,30 @@ const thoughtItems: ThoughtItem[] = [
 
 const projectItems: ProjectItem[] = [
 
-      {
-            name: "Tourease",
-            description: "Plans personalized trip itineraries and adjusts recommendations in real time as you travel.",
-            link: "https://tourease.netlify.app/",
-            image: "https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
-      },
+      // {
+      //       name: "Tourease",
+      //       description: "Plans personalized trip itineraries and adjusts recommendations in real time as you travel.",
+      //       link: "https://tourease.netlify.app/",
+      //       image: "https://avatars.githubusercontent.com/u/183259969?s=200&v=4"
+      // },
       {
             name: "Inova8",
             description: "Helps founders & businesses go from a rough idea to a working AI prototype, fast.",
             link: "https://inova8.in/",
             image: "https://scontent.cdninstagram.com/v/t51.82787-19/518133280_17850285762509742_2841479434577457000_n.jpg?_nc_cat=110&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=u0asY7NWM6QQ7kNvwHKPIUP&_nc_oc=Adp2OH3vk7VZ5BLIgT9_NwNumkOGHnhwe5ymX663CfBmhtttcx0K3Asqv98MCerNX_KJsQxGCGv5EkvEDaLkUQPj&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=NkmMniVmx5p8KJDRSwi5SA&_nc_ss=7b6a8&oh=00_Af-oh1lbZN1zoCKgngfZYf9FKIXHJP21gpOrBUI4nMxlHQ&oe=6A440C46"
       },
-
+       {
+            name: "Baba Construction",
+            description: "Provides construction services and solutions for residential and commercial projects.",
+            link: "https://babaconstruction.netlify.app/",
+            image: "https://babaconstruction.netlify.app/logo.png"
+      },
       {
             name: "QuickWorker",
             description: "Connects you with local workers like electricians, plumbers, and more — fast and hassle-free.",
             link: "https://github.com/amitmasram/QuickWorker",
             image: "https://i.pinimg.com/1200x/c4/35/6c/c4356cd5454d06585e0a46066b555172.jpg"
       },
-
-
       {
             name: "Hometro",
             description: "Find homes and rental properties in your city with exclusive deals you won't see listed elsewhere. ",
