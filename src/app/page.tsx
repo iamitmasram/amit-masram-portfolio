@@ -223,7 +223,7 @@ export default function PortfolioLanding() {
 
                               <div className="mb-5 space-y-2 text-left">
                                     <p className={`text-[0.95rem] md:text-[1.037rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
-                                          I try to put my work out into the world in a way that contributes to others and helps make things better.
+                                          I try to put my work out into the world in a way that contributes to others and helps make things useful.
                                     </p>
 
                                     <p className={`text-[0.95rem] md:text-[1.037rem] ${isDarkMode ? 'text-gray-200' : 'text-gray-800'}`}>
