@@ -92,9 +92,9 @@ const projectItems: ProjectItem[] = [
             image: "https://scontent.cdninstagram.com/v/t51.82787-19/720064387_17925033396355074_2662839305886314536_n.jpg?_nc_cat=106&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=T-vd_eH5FwMQ7kNvwHiL4Xs&_nc_oc=Adp2qSVqjM5fw5Yvd_xjd8mrtbPxiQYWyXC7HCQY0gazjouTWPxjuv_XxA405V38zEC3KsMBKeTQKyzHI_XJ1JyS&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=-t6iUzR2YAhIZkYTSL2u2A&_nc_ss=7b6a8&oh=00_Af-oZdIak9bbxXZdP2UdXuvQQMmJBTOzoJcmUXkCXxZvHg&oe=6A441625"
       },
       {
-            name: "Legaly",
+            name: "Legaly AI",
             description: "Upload any contract or document and get an AI-powered breakdown of what it actually says.",
-            link: "https://legalyai.vercel.app/",
+            link: "https://legalyai.lovable.app/",
             image: "https://cdn4.vectorstock.com/i/1000x1000/96/33/modern-letter-l-with-overlapping-line-logo-design-vector-43539633.jpg"
       },
       {
@@ -190,7 +190,7 @@ export default function PortfolioLanding() {
                                           {/* Social links */}
                                           <div className="text-sm mt-0 flex items-center">
                                                 <a
-                                                      href="https://x.com/amitxmasram"
+                                                      href="https://x.com/iamitmasram"
                                                       target="_blank"
                                                       rel="noopener noreferrer"
                                                       className="hover:underline text-blue-600"
@@ -280,10 +280,10 @@ export default function PortfolioLanding() {
                                                                         className="flex items-start gap-3 group cursor-pointer flex-1"
                                                                   >
                                                                         <span
-                                                                              className={`mt-2 md:mt-3 text-[1rem] md:text-[1.1rem] select-none ${isDarkMode ? 'text-gray-400' : 'text-gray-400'}`}
+                                                                              className={`mt-2 md:mt-3 text-[1rem] md:text-[1.1rem] select-none ${isDarkMode ? 'text-gray-400' : 'text-black-400'}`}
                                                                               style={{ lineHeight: '1.5' }}
                                                                         >
-                                                                              ⁕
+                                                                              ▪
                                                                         </span>
                                                                         <div className="min-w-0 flex-1">
                                                                               <h3 className="text-[14px] md:text-[15px] font-semibold leading-tight group-hover:underline">{item.title}</h3>
@@ -296,10 +296,10 @@ export default function PortfolioLanding() {
                                                                         className="flex items-start gap-3 group flex-1"
                                                                   >
                                                                         <span
-                                                                              className={`mt-2 md:mt-3 text-[1rem] md:text-[1.1rem] select-none ${isDarkMode ? 'text-gray-400' : 'text-gray-400'}`}
+                                                                              className={`mt-2 md:mt-3 text-[1rem] md:text-[1.1rem] select-none ${isDarkMode ? 'text-gray-400' : 'text-black-400'}`}
                                                                               style={{ lineHeight: '1.5' }}
                                                                         >
-                                                                              ⁕
+                                                                              ▪
                                                                         </span>
                                                                         <div className="min-w-0 flex-1">
                                                                               <h3 className="text-[14px] md:text-[15px] font-semibold leading-tight group-hover:underline">{item.title}</h3>

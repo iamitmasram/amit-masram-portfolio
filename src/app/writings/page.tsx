@@ -18,6 +18,7 @@ interface WritingsEntry {
 // Timeline colors
 const LINE_COLOR = "#d4d8dd"
 const MARKER_COLOR = "#111827"
+const MARKER_COLOR_DARK = "#f9fafb"
 
 function WritingCard({
     writing,
@@ -71,17 +72,18 @@ function WritingCard({
                     style={{
                         width: 6,
                         height: 6,
-                        background: MARKER_COLOR,
+                        background: isDarkMode ? MARKER_COLOR_DARK : MARKER_COLOR,
                         borderRadius: 2,
                         flexShrink: 0,
                         marginTop: 6,
                         transition: "transform 0.3s ease, box-shadow 0.3s ease",
                         transform: markerActive ? "scale(1.35)" : "scale(1)",
                         boxShadow: markerActive
-                            ? `0 0 0 3px rgba(17,24,39,0.15)`
+                            ? `0 0 0 3px ${isDarkMode ? "rgba(249,250,251,0.18)" : "rgba(17,24,39,0.15)"}`
                             : "none",
                     }}
                 />
+                
                 {/* Vertical connector line (hidden after last item) */}
                 {!isLast && (
                     <div
